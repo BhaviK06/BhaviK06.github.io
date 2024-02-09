@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A grid</title>
+<meta charset="utf-8" />
+<style>
+header{ grid-area: header; }
+nav { grid-area: menu; }
+main { grid-area: main; }
+aside { grid-area: right; }
+footer { grid-area: footer; }
+
+.grid-container {
+  display: inline-grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+   gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+header, nav, main, aside, footer {
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  
+}
+</style>
+</head>
+<body>
+
+<h1>Grid Layout of Currencies</h1>
+
+<p>The following grid shows various currencies using the semantic and character entities</p>
+
+<div class="grid-container">
+  <header><h2>Some Currencies</h2></header>
+  <nav><h2>The pound sign: &pound;</h2></nav>
+  <main><h2>The euro sign: &euro;</h2></main>  
+  <aside><h2>The yen sign: &yen;</h2><aside>
+  <footer><h2>The cent sign: &cent;</h2></footer>
+</div>
+<h6>The copyright sign: &copy;</h6>
+</body>
+</html>
+
+
 
