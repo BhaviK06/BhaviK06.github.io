@@ -1,0 +1,83 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #34086b;
+    color: rgb(192, 157, 231);
+    padding: 15px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    background-color: rgb(192, 157, 231);
+}
+
+.heading {background-color: rgb(180, 203, 214);
+color: rgb(40, 40, 40);
+padding: 20px 0;
+text-align: center;
+}
+
+h1 {
+margin: 0;}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+.introduction, .industry, .health, .agriculture, .automation {
+    
+        background-color: rgb(180, 203, 214);
+        color: rgb(40, 40, 40);
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+        text-align: left;
+}
+.introduction h2, .industry h2, .health h2, .agriculture h2, .automation h2 {
+    color: rgb(40, 40, 40);
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+.industry img, .health img, .agriculture img, .automation img{
+    float: left;
+    max-width: 300px; 
+    height: auto;
+    margin-right: 25px; 
+    margin-bottom: 15px;
+}
+footer {
+    background-color:#34086b ;
+    color: white;
+    text-align: center;
+    padding: 10px 0;}
