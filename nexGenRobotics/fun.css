@@ -48,13 +48,8 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
-    text-shadow: 2px 2px 4px white;
-    padding: 20px; 
-    border-radius: 10px; 
-    background-color: white; 
-    max-width: 800px; 
-    margin: 0 auto; 
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 #section1 {
@@ -81,7 +76,7 @@ body, html {
     background-image: url('https://th.bing.com/th/id/OIP.iGsAV1z-FS_HY-49oFXaigHaEK?w=290&h=180&c=7&r=0&o=5&dpr=2&pid=1.7');
 }
 #section1, #section2, #section3, #section4, #section5, #section6{
-    background-color: purple;
+    background-color: pur;
 padding: 20px;
 }
 footer {
