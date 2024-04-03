@@ -85,3 +85,9 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+.title-box {
+    background-color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+}
