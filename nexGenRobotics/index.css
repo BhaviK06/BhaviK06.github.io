@@ -110,13 +110,35 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-@media screen and (max-width: 768px) {
-    #services, #about, #contact {
+@media only screen and (max-device-width: 414px) {
+    /* Adjustments for iPhones */
+    header {
+        padding: 10px 0;
+    }
+
+    .header-content {
+        max-width: 90%;
+        flex-direction: column;
         text-align: center;
     }
 
-    #services ul {
-        list-style-type: none;
-        padding: 0;
+    header h1 {
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero {
+        height: 250px;
+    }
+
+    .hero-button {
+        margin-top: 10px;
     }
 }
