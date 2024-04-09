@@ -120,6 +120,3 @@ footer {
         padding: 0;
     }
 }
-[class*="header-content,hero-content"] {
-    width: 100%;
-  }
