@@ -90,24 +90,38 @@ footer {
         
         .header-content {
             max-width: 100%;
-            padding: 0 20px;
+            padding: 0 10px;
         }
         
         header h1 {
-            margin-left: 0;
+            margin-left: 10px;
         }
         
         nav ul li {
             margin-right: 10px;
         }
+        
+        .heading {
+            padding: 15px 10px;
+        }
     
+        main {
+            width: 90%;
+            margin: 10px auto;
+        }
+        
+        .introduction, .industry, .health, .agriculture, .automation {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
         .industry img, .health img, .agriculture img, .automation img{
             float: none;
             max-width: 100%;
             margin-right: 0;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
-    
+        
         footer {
             padding: 5px 0;
         }
