@@ -61,16 +61,29 @@ header {
     cursor: pointer;
   }
   
-  form[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Style the container/contact section */
-  button {
+  .button-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
-  }
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007bff;
+}
   
   /* Create two columns that float next to eachother */
   .column {
