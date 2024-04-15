@@ -91,18 +91,21 @@ footer {
         .header-content {
             max-width: 100%;
             padding: 0 10px;
+            justify-content: space-around; /* Centering navigation links */
         }
         
         header h1 {
-            margin-left: 10px;
+            margin-left: 0; /* Centering the logo and company name */
+            text-align: center;
         }
         
         nav ul li {
-            margin-right: 10px;
+            margin-right: 0; /* Adjusting margin between navigation items */
         }
         
         .heading {
             padding: 15px 10px;
+            text-align: center; /* Centering heading text */
         }
     
         main {
@@ -115,11 +118,13 @@ footer {
             margin-bottom: 10px;
         }
         
-        .industry img, .health img, .agriculture img, .automation img{
+        .industry img, .health img, .agriculture img, .automation img {
             float: none;
             max-width: 100%;
             margin-right: 0;
             margin-bottom: 10px;
+            display: block; /* Ensuring images are centered */
+            margin: 0 auto; /* Centering images */
         }
         
         footer {
