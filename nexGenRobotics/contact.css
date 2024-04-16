@@ -40,8 +40,9 @@ header {
     background-color: rgb(192, 157, 231);
   }
   nav ul li.active a {
-    color:rgb(192, 157, 231); /* Change color to highlight */
+    color:skyblue; /* Change color to highlight */
     font-weight: bold; /* Optionally make it bold */
+    font-size: large;
 }
   * {
     box-sizing: border-box;
@@ -129,8 +130,9 @@ button:hover {
         margin: 10px 0;
     }
     nav ul li.active a {
-      color:rgb(192, 157, 231); /* Change color to highlight */
+      color:skyblue; /* Change color to highlight */
       font-weight: bold; /* Optionally make it bold */
+      font-size: large;
   }
     .column, input[type=submit] {
       width: 100%;

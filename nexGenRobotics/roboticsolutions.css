@@ -39,9 +39,10 @@ nav ul li a:hover {
     background-color: rgb(192, 157, 231);
 }
 nav ul li.active a {
-    color:darkcyan; /* Change color to highlight */
+    color:skyblue; /* Change color to highlight */
     font-weight: bold; /* Optionally make it bold */
-  }
+    font-size: large;
+}
 .heading {background-color: rgb(180, 203, 214);
 color: rgb(40, 40, 40);
 padding: 20px 0;
@@ -112,7 +113,7 @@ footer {
             color:skyblue; /* Change color to highlight */
             font-weight: bold; /* Optionally make it bold */
             font-size: large;
-          }
+        }
     
         .heading {
             padding: 15px 10px;

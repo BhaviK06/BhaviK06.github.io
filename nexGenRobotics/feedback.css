@@ -41,6 +41,11 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgb(192, 157, 231);
 }
+nav ul li.active a {
+    color:skyblue; /* Change color to highlight */
+    font-weight: bold; /* Optionally make it bold */
+    font-size: large;
+}
 main {
     max-width: 600px;
     margin: 40px auto;
