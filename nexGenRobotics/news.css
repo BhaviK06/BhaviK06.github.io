@@ -170,25 +170,30 @@ main {
 }
 
 
-    @media only screen and (max-device-width: 414px) {
-        /* Adjustments for iPhones */
-        header {
-            padding: 10px 0;
-        }
-        
-        .header-content {
-            max-width: 100%;
-            padding: 0 20px;
-        }
-        
-        header h1 {
-            margin-left: 0;
-        }
-        
-        nav ul li {
-            margin-right: 10px;
-        }
-        
+@media only screen and (max-width: 430px) {
+    /* Adjustments for iPhones */
+    header {
+        padding: 10px 0;
+    }
+
+    .header-content {
+        max-width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
         .upcoming-events img {
             max-width: 40%;
             margin-right: 10px;
@@ -198,4 +203,4 @@ main {
             max-width: 40%;
             margin-right: 10px;
         }
-    }
+    
