@@ -87,22 +87,25 @@ footer {
         header {
             padding: 10px 0;
         }
-        
+    
         .header-content {
-            max-width: 100%;
-            padding: 0 10px;
-            justify-content: space-around; /* Centering navigation links */
-        }
-        
-        header h1 {
-            margin-left: 0; /* Centering the logo and company name */
+            max-width: 90%;
+            flex-direction: column;
             text-align: center;
         }
-        
-        nav ul li {
-            margin-right: 0; /* Adjusting margin between navigation items */
+    
+        header h1 {
+            margin: 10px 0;
         }
-        
+    
+        nav ul {
+            flex-direction: column;
+        }
+    
+        nav ul li {
+            margin: 10px 0;
+        }
+    
         .heading {
             padding: 15px 10px;
             text-align: center; /* Centering heading text */
