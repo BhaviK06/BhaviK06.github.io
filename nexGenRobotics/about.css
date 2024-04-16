@@ -47,6 +47,10 @@ nav ul li a {
 nav ul li a:hover {
   background-color: rgb(192, 157, 231);
 }
+nav ul li.active a {
+  color:rgb(192, 157, 231); /* Change color to highlight */
+  font-weight: bold; /* Optionally make it bold */
+}
 
 .column {
   display: flex;
@@ -128,6 +132,10 @@ nav ul li a:hover {
   nav ul li {
       margin: 10px 0;
   }
+  nav ul li.active a {
+    color:rgb(192, 157, 231); /* Change color to highlight */
+    font-weight: bold; /* Optionally make it bold */
+}
   .column {
     width: 100%;
     display: block;

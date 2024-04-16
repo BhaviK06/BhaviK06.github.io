@@ -33,6 +33,10 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgb(192, 157, 231);
 }
+nav ul li.active a {
+    color:rgb(192, 157, 231); /* Change color to highlight */
+    font-weight: bold; /* Optionally make it bold */
+}
 body, html {
     height: 100%;
     margin: 0;
@@ -114,11 +118,15 @@ footer {
     nav ul li {
         margin: 10px 0;
     }
+    
     .title-box {
         padding: 10px; /* Adjust padding for smaller screens */
         font-size: 18px; /* Adjust font size for smaller screens */
     }
-
+    nav ul li.active a {
+        color:rgb(192, 157, 231); /* Change color to highlight */
+        font-weight: bold; /* Optionally make it bold */
+    }
     .parallax-section {
         background-attachment: scroll; /* Change background attachment for better performance */
     }
