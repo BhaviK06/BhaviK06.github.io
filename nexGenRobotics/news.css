@@ -41,6 +41,7 @@ nav ul li a:hover {
 nav ul li.active a {
     color:skyblue; /* Change color to highlight */
     font-weight: bold; /* Optionally make it bold */
+    font-size: large;
 }
 footer {
     background-color:#34086b ;
