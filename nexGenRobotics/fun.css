@@ -91,3 +91,27 @@ footer {
     padding: 10px 20px; 
     border-radius: 5px; 
 }
+@media only screen and (max-width: 430px) {
+    /* Adjustments for iPhones */
+    header {
+        padding: 10px 0;
+    }
+
+    .header-content {
+        max-width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
