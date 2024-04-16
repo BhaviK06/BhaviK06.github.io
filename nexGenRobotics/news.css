@@ -69,8 +69,8 @@ main {
     width: 80%;
     margin: 20px auto;
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
+    flex-wrap: wrap; /* Ensure items wrap to next line if they don't fit */
+    justify-content: space-between; /* Ensure equal spacing between items */
 }
 
 .introduction, .news1, .news2, .news3{
@@ -80,7 +80,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: calc(25% - 20px); 
+    width: calc(25% - 20px); /* Adjust width based on desired spacing */
     margin-bottom: 20px;
 }
 
@@ -127,25 +127,25 @@ main {
 }
 
 .heading {
-    background-color: #79a3b1; 
+    background-color: #79a3b1; /* Use the same background color as the upcoming-events */
     color: black;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    display: flex;
-    align-items: center; 
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center align items */
 }
 
 .heading h2 {
-    flex: 1; 
+    flex: 1; /* Take up remaining space */
     text-align: center;
 }
 
 .heading img {
-    max-width: 30%; 
+    max-width: 30%; /* Set width of the image */
     height: auto;
-    margin-right: 20px; 
+    margin-right: 20px; /* Add space between image and text */
 }
 
 .event1, .event2, .event3{
@@ -155,7 +155,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: calc(25% - 20px); 
+    width: calc(25% - 20px); /* Adjust width based on desired spacing */
     margin-bottom: 20px;
 }
 
@@ -171,6 +171,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 @media only screen and (max-width: 430px) {
