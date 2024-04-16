@@ -109,8 +109,9 @@ footer {
             margin: 10px 0;
         }
         nav ul li.active a {
-            color:darkcyan; /* Change color to highlight */
+            color:skyblue; /* Change color to highlight */
             font-weight: bold; /* Optionally make it bold */
+            font-size: large;
           }
     
         .heading {
