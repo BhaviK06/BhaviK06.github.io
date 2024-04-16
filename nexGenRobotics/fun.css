@@ -114,4 +114,16 @@ footer {
     nav ul li {
         margin: 10px 0;
     }
+    .title-box {
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .parallax-section {
+        background-attachment: scroll; /* Change background attachment for better performance */
+    }
+
+    footer {
+        padding: 15px 0; /* Increase footer padding for better spacing on smaller screens */
+    }
 }
