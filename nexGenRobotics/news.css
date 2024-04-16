@@ -194,13 +194,18 @@ main {
         margin: 10px 0;
     }
 }
-        .upcoming-events img {
-            max-width: 40%;
-            margin-right: 10px;
-        }
-        
-        .heading img {
-            max-width: 40%;
-            margin-right: 10px;
-        }
+.heading img {
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+.news1, .news2, .news3, .event1, .event2, .event3 {
+    width: 100%;
+}
+
+.upcoming-events img {
+    max-width: 80%;
+    margin: 10px auto;
+}
+
     
