@@ -47,7 +47,7 @@ nav ul li.active a {
     font-size: large;
 }
 #hero {
-    background-image: url("background image.jpg") ;
+    background-image: url("homepage background.jpg") ;
     background-size: cover;
     background-position: center;
     height: 400px;
