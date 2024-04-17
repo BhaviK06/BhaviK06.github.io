@@ -66,6 +66,7 @@ nav ul li.active a {
   padding: 10px; /* Adjust the padding as needed */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
+  align-items: center;
 }
 
 .container {
@@ -141,6 +142,7 @@ nav ul li.active a {
   .column {
     width: 50%;
     display: block;
+    align-items: center;
   }
 }
 
