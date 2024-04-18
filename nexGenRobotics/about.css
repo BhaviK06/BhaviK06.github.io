@@ -57,22 +57,20 @@ nav ul li.active a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 50%;
+  width: 100%; /* Adjust the width as needed */
   padding: 0 8px;
 }
 
 .card {
   width: 50%; /* Adjust the width as needed */
-  max-height: calc(100vh - 200px); /* Set a maximum height */
   padding: 10px; /* Adjust the padding as needed */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
+  margin: 0 auto; /* Horizontally center the CEO box */
   align-items: center;
   display: flex;
   flex-direction: column;
-  overflow: auto; /* Add scrollbars if content exceeds max height */
 }
+
 .container {
   padding: 0 16px;
   align-items: center;
