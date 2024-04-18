@@ -49,15 +49,13 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto; /* Adjust height to be responsive */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
     text-shadow: 2px 2px 4px white;
-    padding: 50px 20px; /* Adjust padding for better spacing */
 }
-
 
 #section1 {
     background-image: url('https://informationage-production.s3.amazonaws.com/uploads/2018/02/artificial-intelligence-consumers-scaled.jpg'); /* Replace with your image path */
