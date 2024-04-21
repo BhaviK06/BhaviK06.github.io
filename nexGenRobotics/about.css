@@ -66,11 +66,11 @@ nav ul li.active a {
   max-width: 400px; /* Limit the maximum width */
   padding: 20px; /* Adjust the padding as needed */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 0 auto; /* Horizontally center the CEO box */
+  margin: 20px auto; /* Add margin to create space between cards */
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 300px; /* Adjust the height as needed */
+  height: 280px; /* Reduce the height to prevent overlap */
 }
 
 
@@ -116,6 +116,13 @@ nav ul li.active a {
   background-color: #555;
 }
 
+footer {
+  background-color: #34086b;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Increase padding to create separation */
+  margin-top: 20px; /* Add margin to create space between content and footer */
+}
 @media only screen and (max-width: 430px) {
   /* Adjustments for iPhones */
   header {
