@@ -204,18 +204,30 @@ main {
         font-size: large;
     }
 
-.heading img {
-    max-width: 80%;
-    margin: 10px auto;
-}
+    .heading,
+    .upcoming-events {
+        padding: 10px; /* Decrease padding for better use of space */
+    }
 
-.news1, .news2, .news3, .event1, .event2, .event3 {
-    width: 100%;
-}
+    .heading p,
+    .upcoming-events p {
+        font-size: 14px; /* Increase font size for better readability */
+        text-align: center; /* Center-align text */
+        margin-top: 10px; /* Add some space above the text */
+    }
 
-.upcoming-events img {
-    max-width: 80%;
-    margin: 10px auto;
-}
+    .heading img,
+    .upcoming-events img {
+        max-width: 80%;
+        margin: 10px auto; /* Center-align images */
+    }
+
+    .heading h2,
+    .upcoming-events h2 {
+        font-size: 18px; /* Increase font size for better readability */
+        text-align: center; /* Center-align headings */
+        margin-bottom: 10px; /* Add some space below the headings */
+    }
+
 
 }
