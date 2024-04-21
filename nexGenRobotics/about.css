@@ -13,7 +13,7 @@ html {
 
 header {
   background-color: #34086b;
-  color: rgb(192, 157, 231);
+  color: #c09de7; /* Adjusted text color for better contrast */
   padding: 15px 0;
 }
 
@@ -27,6 +27,7 @@ header {
 
 header h1 {
   margin-left: 20px;
+  color: #ffffff; /* Adjusted color for better visibility */
 }
 
 nav ul {
@@ -45,11 +46,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: rgb(192, 157, 231);
+  background-color: #c09de7;
 }
+
 nav ul li.active a {
-  color:skyblue; /* Change color to highlight */
-  font-weight: bold; /* Optionally make it bold */
+  color: #87ceeb; /* Adjusted color for better visibility */
+  font-weight: bold;
   font-size: large;
 }
 
@@ -57,27 +59,26 @@ nav ul li.active a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Adjust the width as needed */
+  width: 100%;
   padding: 0 8px;
 }
 
 .card {
-  width: 80%; /* Adjust the width as needed */
-  max-width: 400px; /* Limit the maximum width */
-  padding: 20px; /* Adjust the padding as needed */
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 20px auto; /* Add margin to create space between cards */
+  margin: 20px auto;
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 280px; /* Reduce the height to prevent overlap */
+  height: auto; /* Adjusted to auto for dynamic content */
 }
-
 
 .container {
   padding: 0 16px;
-  align-items: center;
-  font-size: 14px; /* Adjust the font size as needed */
+  text-align: center; /* Changed from align-items */
+  font-size: 14px;
 }
 
 .about-section {
@@ -87,80 +88,47 @@ nav ul li.active a {
   color: black;
 }
 
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-  align-items: center;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  align-items: center;
-}
-
-.button:hover {
-  background-color: #555;
-}
-
 footer {
   background-color: #34086b;
   color: white;
   text-align: center;
-  padding: 20px 0; /* Increase padding to create separation */
-  margin-top: 20px; /* Add margin to create space between content and footer */
+  padding: 20px 0;
+  margin-top: 20px;
 }
+
 @media only screen and (max-width: 430px) {
-  /* Adjustments for iPhones */
+  /* Adjustments for smaller screens */
   header {
-      padding: 10px 0;
+    padding: 10px 0;
   }
 
   .header-content {
-      max-width: 90%;
-      flex-direction: column;
-      text-align: center;
+    max-width: 90%;
+    flex-direction: column;
+    text-align: center;
   }
 
   header h1 {
-      margin: 10px 0;
+    margin: 10px 0;
   }
 
   nav ul {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   nav ul li {
-      margin: 10px 0;
+    margin: 10px 0;
   }
+
   nav ul li.active a {
-    color:skyblue; /* Change color to highlight */
-    font-weight: bold; /* Optionally make it bold */
+    color: #87ceeb; /* Adjusted color for better visibility */
+    font-weight: bold;
     font-size: large;
-}
+  }
+
   .column {
     width: 50%;
     display: block;
     align-items: center;
   }
-}
-
-footer {
-  background-color:#34086b ;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
 }
