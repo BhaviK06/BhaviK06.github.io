@@ -80,6 +80,7 @@ nav ul li.active a {
   text-align: center;
   font-size: 14px;
   flex: 1; 
+  height: 200px;
 }
 
 .card img {
