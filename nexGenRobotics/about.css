@@ -131,4 +131,10 @@ footer {
     display: block;
     align-items: center;
   }
+  .card{ 
+    align-items: center;
+  }
+  .container{
+    align-items: center;
+  }
 }
