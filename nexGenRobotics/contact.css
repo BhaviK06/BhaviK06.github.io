@@ -145,7 +145,7 @@ button:hover {
     text-align: center;
     padding: 10px 0;
   }
-  .column img{
-    height: 300px;
-    width: 100px;
-  }
+  .column img {
+    max-width: 80%; /* Reduce the image size for smaller screens */
+    height: auto; /* Let the height adjust proportionally */
+}
