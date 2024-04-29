@@ -158,4 +158,12 @@ footer {
     height: 300px; 
     max-height: 300px; 
   }
+  .card {
+    width: 90%; /* Adjusted width for smaller screens */
+  }
+
+  .container {
+    padding: 0 8px; /* Adjust padding for smaller screens */
+  }
+
 }
