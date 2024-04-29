@@ -13,7 +13,7 @@ html {
 
 header {
   background-color: #34086b;
-  color: #c09de7; /* Adjusted text color for better contrast */
+  color: #c09de7; 
   padding: 15px 0;
 }
 
@@ -27,7 +27,7 @@ header {
 
 header h1 {
   margin-left: 20px;
-  color: #ffffff; /* Adjusted color for better visibility */
+  color: #ffffff; 
 }
 
 nav ul {
@@ -50,7 +50,7 @@ nav ul li a:hover {
 }
 
 nav ul li.active a {
-  color: #87ceeb; /* Adjusted color for better visibility */
+  color: #87ceeb; 
   font-weight: bold;
   font-size: large;
 }
@@ -129,7 +129,7 @@ footer {
   }
 
   nav ul li.active a {
-    color: #87ceeb; /* Adjusted color for better visibility */
+    color: #87ceeb; 
     font-weight: bold;
     font-size: large;
   }
@@ -143,21 +143,21 @@ footer {
   
   
   .card {
-    width: 95%; /* Set width to 95% of the viewport width */
-    max-width: 450px; /* Set a maximum width for the card */
-    padding: 20px 2.5%; /* Adjust padding for smaller screens */
-    margin: 0 auto; /* Center the box horizontally */
+    width: 95%; 
+    max-width: 450px; 
+    padding: 20px 2.5%; 
+    margin: 0 auto; 
     align-items: center;
   }
 
   .container {
-    max-height: 200px; /* Set a maximum height for the container */
-    overflow-y: auto; /* Enable vertical scrolling for overflowed content */
+    max-height: 200px;
+    overflow-y: auto; 
     align-items: center;
   }
 
   .card img {
-    width: 100%; /* Ensure image takes full width of container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; /
   }
 }
