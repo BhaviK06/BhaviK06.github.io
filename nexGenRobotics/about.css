@@ -144,8 +144,18 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  .container{
-    align-items: center;
+  .container {
+    padding: 0 16px;
+    text-align: center;
+    font-size: 14px;
+    flex: 1; 
+    height: 200px;
     justify-content: center;
+  }
+  
+  .card img {
+    width: 400px; 
+    height: 300px; 
+    max-height: 300px; 
   }
 }
