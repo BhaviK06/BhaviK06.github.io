@@ -156,14 +156,14 @@ footer {
   .card {
     width: 95%; /* Adjusted width for iPhone 14 Pro Max */
     padding: 20px; /* Adjust padding for smaller screens */
-    align-items: center;
-    justify-content: center;
   }
 
   .container {
     padding: 0 16px; /* Adjust padding for smaller screens */
-    align-items: center;
-    justify-content: center;
+    max-height: 200px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling for overflowed content */
+    width: calc(100% - 32px); /* Calculate width based on padding */
+    margin: 0 auto; /* Center the container horizontally */
   }
 
   .card img {
