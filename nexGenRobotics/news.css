@@ -39,8 +39,8 @@ nav ul li a:hover {
     background-color: rgb(192, 157, 231);
 }
 nav ul li.active a {
-    color:skyblue; /* Change color to highlight */
-    font-weight: bold; /* Optionally make it bold */
+    color:skyblue; 
+    font-weight: bold; 
     font-size: large;
 }
 footer {
@@ -70,7 +70,7 @@ main {
     width: 80%;
     margin: 20px auto;
     display: flex;
-    flex-wrap: wrap; /* Ensure items wrap to next line if they don't fit */
+    flex-wrap: wrap;
     justify-content: space-between; /* Ensure equal spacing between items */
 }
 
@@ -144,9 +144,9 @@ main {
 }
 
 .heading img {
-    max-width: 30%; /* Set width of the image */
+    max-width: 30%; 
     height: auto;
-    margin-right: 20px; /* Add space between image and text */
+    margin-right: 20px; 
 }
 
 .event1, .event2, .event3{
@@ -156,7 +156,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: calc(25% - 20px); /* Adjust width based on desired spacing */
+    width: calc(25% - 20px);
     margin-bottom: 20px;
 }
 
@@ -199,8 +199,8 @@ main {
         margin: 10px 0;
     }
     nav ul li.active a {
-        color:skyblue; /* Change color to highlight */
-        font-weight: bold; /* Optionally make it bold */
+        color:skyblue; 
+        font-weight: bold; 
         font-size: large;
     }
 
