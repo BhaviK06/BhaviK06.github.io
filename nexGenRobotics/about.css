@@ -150,7 +150,7 @@ footer {
     font-size: 14px;
     flex: 1; 
     height: 200px;
-    justify-content: center;
+    width: 400px;
   }
   
   .card img {
