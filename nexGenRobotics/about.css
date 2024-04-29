@@ -153,17 +153,22 @@ footer {
     width: 400px;
   }
   
-  .card img {
-    width: 400px; 
-    height: 300px; 
-    max-height: 300px; 
-  }
   .card {
-    width: 90%; /* Adjusted width for smaller screens */
+    width: 95%; /* Adjusted width for iPhone 14 Pro Max */
+    padding: 20px; /* Adjust padding for smaller screens */
+    align-items: center;
+    justify-content: center;
   }
 
   .container {
-    padding: 0 8px; /* Adjust padding for smaller screens */
+    padding: 0 16px; /* Adjust padding for smaller screens */
+    align-items: center;
+    justify-content: center;
   }
 
+  .card img {
+    width: 100%; /* Ensure image takes full width of container */
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
