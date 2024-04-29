@@ -39,8 +39,8 @@ nav ul li a:hover {
     background-color: rgb(192, 157, 231);
 }
 nav ul li.active a {
-    color:skyblue; /* Change color to highlight */
-    font-weight: bold; /* Optionally make it bold */
+    color:skyblue; 
+    font-weight: bold; 
     font-size: large;
 }
 .heading {background-color: rgb(180, 203, 214);
@@ -110,14 +110,14 @@ footer {
             margin: 10px 0;
         }
         nav ul li.active a {
-            color:skyblue; /* Change color to highlight */
-            font-weight: bold; /* Optionally make it bold */
+            color:skyblue; 
+            font-weight: bold; 
             font-size: large;
         }
     
         .heading {
             padding: 15px 10px;
-            text-align: center; /* Centering heading text */
+            text-align: center; 
         }
     
         main {
@@ -135,8 +135,8 @@ footer {
             max-width: 100%;
             margin-right: 0;
             margin-bottom: 10px;
-            display: block; /* Ensuring images are centered */
-            margin: 0 auto; /* Centering images */
+            display: block; 
+            margin: 0 auto; 
         }
         
         footer {

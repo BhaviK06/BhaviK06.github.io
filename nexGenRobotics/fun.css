@@ -120,23 +120,27 @@ footer {
         margin: 10px 0;
     }
     nav ul li.active a {
-        color:skyblue; /* Change color to highlight */
-        font-weight: bold; /* Optionally make it bold */
+        color:skyblue; 
+        font-weight: bold; 
         font-size: large;
     }
     .title-box {
-        padding: 5px 10px; /* Adjust padding for smaller screens */
-        font-size: 12px; /* Adjust font size for smaller screens */
+        padding: 5px 10px; 
+        font-size: 12px; 
     }
    
     .parallax-section {
-        background-attachment: scroll; /* Change background attachment for mobile */
-        height: auto; /* Allow height to adjust based on content */
-        padding: 30px 10px; /* Adjust padding for smaller screens */
+        background-attachment: fixed; 
+        height: auto; 
+        padding: 30px 10px; 
     }
+    .title-box {
+        background-color: white; 
+        padding: 5px 10px; 
+        border-radius: 5px; 
 
 
     footer {
-        padding: 15px 0; /* Increase footer padding for better spacing on smaller screens */
+        padding: 15px 0; 
     }
 }

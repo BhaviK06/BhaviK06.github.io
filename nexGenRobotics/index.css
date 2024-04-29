@@ -42,8 +42,8 @@ nav ul li a:hover {
     background-color: rgb(192, 157, 231);
 }
 nav ul li.active a {
-    color:skyblue; /* Change color to highlight */
-    font-weight: bold; /* Optionally make it bold */
+    color:skyblue; 
+    font-weight: bold;
     font-size: large;
 }
 #hero {
@@ -143,8 +143,8 @@ footer {
         padding: 5px 10px;
     }
     nav ul li.active a {
-        color:skyblue; /* Change color to highlight */
-        font-weight: bold; /* Optionally make it bold */
+        color:skyblue; 
+        font-weight: bold; 
         font-size: large;
     }
 
