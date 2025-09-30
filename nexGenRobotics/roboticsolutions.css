@@ -38,7 +38,11 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgb(192, 157, 231);
 }
-
+nav ul li.active a {
+    color:skyblue; 
+    font-weight: bold; 
+    font-size: large;
+}
 .heading {background-color: rgb(180, 203, 214);
 color: rgb(40, 40, 40);
 padding: 20px 0;
@@ -81,3 +85,61 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;}
+
+    @media only screen and (max-width: 430px) {
+        /* Adjustments for iPhones */
+        header {
+            padding: 10px 0;
+        }
+    
+        .header-content {
+            max-width: 90%;
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        header h1 {
+            margin: 10px 0;
+        }
+    
+        nav ul {
+            flex-direction: column;
+        }
+    
+        nav ul li {
+            margin: 10px 0;
+        }
+        nav ul li.active a {
+            color:skyblue; 
+            font-weight: bold; 
+            font-size: large;
+        }
+    
+        .heading {
+            padding: 15px 10px;
+            text-align: center; 
+        }
+    
+        main {
+            width: 90%;
+            margin: 10px auto;
+        }
+        
+        .introduction, .industry, .health, .agriculture, .automation {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .industry img, .health img, .agriculture img, .automation img {
+            float: none;
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+            display: block; 
+            margin: 0 auto; 
+        }
+        
+        footer {
+            padding: 5px 0;
+        }
+    }

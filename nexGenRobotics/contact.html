@@ -9,15 +9,17 @@
 <body>
     <header>
         <div class="header-content">
+          <img src="logo.png" style="width: 110px; height: 125px;" alt="logo"/>        
             <h1>NexGen Robotics</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="roboticsolutions.html">Robotic Solutions</a></li>
-                    <li><a href="news.html">News & Events</a></li>
-                    <li><a href="fun.html">Fun Facts</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li> <a href = "roboticsolutions.html"> Robotic Solutions </a> </li>
+                  <li> <a href = "news.html"> News & Events </a> </li>
+                  <li> <a href = "fun.html"> Fun Facts </a> </li>
+                  <li> <a href = "about.html"> About Us </a> </li>
+                  <li class="active"> <a href = "contact.html"> Contact Us </a> </li>
+                  <li> <a href = "feedback.html"> Feedback </a> </li>
                 </ul>
             </nav>
         </div>
@@ -41,7 +43,7 @@
           ">
           </div>
           <div class="column">
-            <form action="/action_page.php">
+            <form onsubmit="handleSubmit(); return false;">
               <label for="fname">First Name</label>
               <input type="text" id="fname" name="firstname" placeholder="Your name..">
               <label for="lname">Last Name</label>
@@ -54,13 +56,15 @@
               </select>
               <label for="subject">Subject</label>
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-              <a href="submit.html"> </a><input type="submit" value="Submit"> 
-            </form>
+              <form action="submit.html">
+                <button type="submit">Submit</button>
+            
           </div>
         </div>
       </div>
       <footer>
         <p>© 2024 NexGen Robotics. All rights reserved.</p>
     </footer>
+  <script src="contact.js"></script>
 </body>
 </html>

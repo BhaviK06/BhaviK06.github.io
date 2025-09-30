@@ -2,8 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color:rgb(192, 157, 231);
+    min-height: 100vh;
 }
 
 header {
@@ -41,10 +41,15 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgb(192, 157, 231);
 }
+nav ul li.active a {
+    color:skyblue;
+    font-weight: bold; 
+    font-size: large;
+}
 main {
     max-width: 600px;
     margin: 40px auto;
-    padding: 20px 40px; /* Increased right padding */
+    padding: 20px 40px; 
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -57,7 +62,7 @@ main h1 {
 form {
     display: flex;
     flex-direction: column;
-    padding-right: 20px; /* Additional padding for the form */
+    padding-right: 20px; 
 }
 
 label {
@@ -68,7 +73,7 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
-    width: calc(100% - 20px); /* Adjust width to account for padding */
+    width: calc(100% - 20px); 
     padding: 8px;
     margin-top: 5px;
     border-radius: 4px;
@@ -117,8 +122,34 @@ legend {
 .content h3{
     text-align: center;
 }
-footer {
+ footer {
     background-color:#34086b ;
     color: white;
     text-align: center;
+    margin-top: auto;
     padding: 10px 0;}
+    
+    @media only screen and (max-width: 430px) {
+        /* Adjustments for iPhones */
+        header {
+            padding: 10px 0;
+        }
+    
+        .header-content {
+            max-width: 90%;
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        header h1 {
+            margin: 10px 0;
+        }
+    
+        nav ul {
+            flex-direction: column;
+        }
+    
+        nav ul li {
+            margin: 10px 0;
+        }
+    }

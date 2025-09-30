@@ -38,7 +38,11 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgb(192, 157, 231);
 }
-
+nav ul li.active a {
+    color:skyblue; 
+    font-weight: bold; 
+    font-size: large;
+}
 footer {
     background-color:#34086b ;
     color: white;
@@ -46,7 +50,7 @@ footer {
     padding: 10px 0;
 }
 #hero {
-    background-image: url("https://th.bing.com/th/id/OIP.fTfwguJ3nPkoBkEUPpVQ6gHaEK?w=297&h=180&c=7&r=0&o=5&dpr=2&pid=1.7") ;
+    background-image: url("banner-01.png") ;
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -66,7 +70,7 @@ main {
     width: 80%;
     margin: 20px auto;
     display: flex;
-    flex-wrap: wrap; /* Ensure items wrap to next line if they don't fit */
+    flex-wrap: wrap;
     justify-content: space-between; /* Ensure equal spacing between items */
 }
 
@@ -140,9 +144,9 @@ main {
 }
 
 .heading img {
-    max-width: 30%; /* Set width of the image */
+    max-width: 30%; 
     height: auto;
-    margin-right: 20px; /* Add space between image and text */
+    margin-right: 20px; 
 }
 
 .event1, .event2, .event3{
@@ -152,7 +156,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: calc(25% - 20px); /* Adjust width based on desired spacing */
+    width: calc(25% - 20px);
     margin-bottom: 20px;
 }
 
@@ -167,4 +171,51 @@ main {
 {
     max-width: 100%;
     height: auto;
+}
+
+
+
+@media only screen and (max-width: 430px) {
+    /* Adjustments for iPhones */
+    header {
+        padding: 10px 0;
+    }
+
+    .header-content {
+        max-width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li.active a {
+        color:skyblue; 
+        font-weight: bold; 
+        font-size: large;
+    }
+
+.heading img {
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+.news1, .news2, .news3, .event1, .event2, .event3 {
+    width: 100%;
+}
+
+.upcoming-events img {
+    max-width: 80%;
+    margin: 10px auto;
+}
+
 }
