@@ -1,40 +1,235 @@
 <!DOCTYPE html>
-<html lang= "en">
+<html lang="en">
 <head>
-  <title>Webpage</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bhavi Kataria — Portfolio</title>
+  <meta name="description" content="Bhavi Kataria — BIT student at Haaga-Helia. Front-end projects in React, TypeScript, JavaScript, and Java." />
+  <meta name="theme-color" content="#eef0f3" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    body {
-  background: pink;}
-h1 {
-  font-weight: bold;
-  text-align: center;
-text-decoration: underline;
-  font-style: italic;
-  color: purple;}
-    
+    :root{
+      --bg:#eef0f3;
+      --panel:#ffffff;
+      --text:#111318;
+      --muted:#6b7280;
+      --accent:#111318;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+    [data-theme="dark"]{
+      --bg:#0b0c10;
+      --panel:#11131a;
+      --text:#e6e7eb;
+      --muted:#9aa0a6;
+      --accent:#e6e7eb;
+      --shadow:0 10px 30px rgba(0,0,0,.4);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1180px;margin:0 auto;padding:28px}
+
+    header{position:sticky;top:0;z-index:20;backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid rgba(0,0,0,.05);background:color-mix(in oklab, var(--bg) 85%, transparent)}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{font-weight:800;letter-spacing:.02em}
+    .menu{display:flex;gap:22px;align-items:center}
+    .menu a{color:var(--muted);font-weight:600}
+    .menu a.active{color:var(--text);border-bottom:3px solid var(--accent);padding-bottom:6px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid rgba(0,0,0,.1);background:var(--text);color:#fff;font-weight:700}
+    .btn.ghost{background:transparent;color:var(--text)}
+
+    .hero{min-height:70vh;display:grid;align-items:end;padding:80px 0 40px}
+    .display{font-family:"Playfair Display",Georgia,serif;font-weight:800;line-height:.9;letter-spacing:-.02em;font-size:clamp(60px,14vw,180px);margin:0}
+    .sub{max-width:640px;margin-top:18px;color:var(--muted);font-size:20px}
+    .scroll-down{margin-top:32px;height:60px;display:flex;align-items:end;color:var(--muted)}
+
+    .section{padding:60px 0}
+    .section h2{font-family:"Playfair Display",Georgia,serif;font-size:40px;margin:0 0 10px}
+    .lede{color:var(--muted);max-width:760px}
+
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+    .card{background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(0,0,0,.06)}
+    .thumb{aspect-ratio:16/10;object-fit:cover;width:100%}
+    .body{padding:16px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .chip{font-size:12px;color:var(--muted);border:1px solid rgba(0,0,0,.12);padding:4px 8px;border-radius:999px}
+
+    .about-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .about-photo{position:relative;border-radius:var(--radius);overflow:hidden}
+    .about-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(.95)}
+    .about-text{background:var(--panel);padding:24px;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    .xp-list{display:grid;gap:18px;margin-top:22px}
+    .xp-item{background:var(--panel);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.06)}
+    .xp-item h3{margin:0 0 6px}
+    .xp-item p{margin:0;color:var(--muted)}
+
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .contact .panel{background:var(--panel);padding:24px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.06)}
+
+    footer{padding:50px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr 1fr}
+      .about-wrap{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width: 680px){
+      .grid{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">bk</div>
+        <div class="tagline">Bhavi Kataria</div>
+      </div>
+      <nav class="menu">
+        <a class="active" href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn" class="btn ghost" aria-label="Toggle theme">🌗</button>
+      </nav>
+    </div>
+  </header>
 
-  <h1>BHAVI KATARIA</h1>
-  <img src="https://www.pngall.com/wp-content/uploads/5/Hello-Speech-Bubble-PNG-Download-Image.png" alt="hello picture"
-     height=200px
-    width=300px>
-    <br>
-  <p>Welcome to my website!</p>
-<a href= " icecream.html" > Click me for something fun </a>
-  <br>
-  <br>
-  <a href= "grid.html" > Click me for a grid </a>
-  <br>
-  <br>
-  <a href="https://bhavik06.github.io/nexGenRobotics/">NexGen Robotics</a>
-  <br>
-  <br>
-  <a href="https://bhavik06.github.io/layout_tests/">Layout tests</a>
-  <br>
-  <a href = "temp-converter/index.html" > Click me for a temperature converter </a>
-  
+  <section id="home" class="hero container">
+    <h1 class="display">Hello,<br/>World.</h1>
+    <p class="sub">👋 I’m Bhavi, a BIT student in Helsinki focused on front-end development (React, TypeScript). I like clean, minimal UX and building small useful products. Scroll to see my work.</p>
+    <div class="scroll-down">↓</div>
+  </section>
+
+  <section id="projects" class="section container">
+    <h2>Work</h2>
+    <p class="lede">A few things I’ve built or am building. Each card links to the repo, plus a live demo when available.</p>
+    <div id="projectGrid" class="grid"></div>
+  </section>
+
+  <section id="about" class="section container">
+    <h2>About Bhavi</h2>
+    <div class="about-wrap">
+      <div class="about-photo card">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop" alt="Bhavi working on laptop"/>
+      </div>
+      <div class="about-text">
+        <p>
+          I’m studying Business Information Technology at Haaga-Helia. I enjoy turning ideas into friendly web apps and care a lot about tidy code, readable typography, and calm interfaces.
+        </p>
+        <p>
+          Recently, I’ve worked on a Personal Trainer CRM (React + REST), a portfolio site on GitHub Pages, and cozy concepts around reading/journaling. I’m currently learning charts, authentication and basic testing.
+        </p>
+        <p style="margin:0">Outside of code: photography, journaling, and exploring Helsinki’s parks and beaches ☀️</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section container">
+    <h2>Experience</h2>
+    <div class="xp-list">
+      <div class="xp-item">
+        <h3>Lidl — Customer Service (Part-time)</h3>
+        <p>Fast, friendly service; POS operations; teamwork and communication.</p>
+      </div>
+      <div class="xp-item">
+        <h3>Haaga-Helia — BIT Student</h3>
+        <p>Front-end development, Java/SQL, and project work with real REST APIs.</p>
+      </div>
+      <div class="xp-item">
+        <h3>Nordic Business Forum — Volunteer (2024)</h3>
+        <p>Operations & guest experience in a high-tempo environment.</p>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:14px">
+      <a class="btn ghost" href="./Bhavi_Kataria_CV.pdf" target="_blank" rel="noopener">View Résumé →</a>
+    </p>
+  </section>
+
+  <section id="contact" class="section container">
+    <h2>Call me, beep me</h2>
+    <div class="contact">
+      <div class="panel">
+        <p><b>Email</b><br>
+          <a href="mailto:bhavikataria.dev@gmail.com">bhavikataria.dev@gmail.com</a>
+        </p>
+      </div>
+      <div class="panel">
+        <p>Open to internships and junior front-end roles in 2025. I’m happy to collaborate on small, well-scoped projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container">
+    <small>© <span id="year"></span> Bhavi Kataria</small>
+    <small>Minimal HTML/CSS/JS • GitHub Pages</small>
+  </footer>
+
+  <script>
+    const projects = [
+      {
+        title: "NexGen Robotics",
+        desc: "React app for managing customers & training sessions. CRUD, CSV export, calendar, stats.",
+        tags: ["React","TypeScript","REST API"],
+        img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop",
+        repo: "https://github.com/BhaviK06.github.io/nexGenRobotics/",
+        live: "#"
+      },
+      {
+        title: "Portfolio Website",
+        desc: "Clean, minimal site deployed with GitHub Pages.",
+        tags: ["HTML","CSS","JavaScript"],
+        img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+        repo: "https://github.com/BhaviK06/BhaviK06.github.io",
+        live: "https://bhavik06.github.io/"
+      },
+      {
+        title: "Reading Tracker (Concept)",
+        desc: "Cozy pastel reading/journal concept with quotes & mood tags.",
+        tags: ["React","UX"],
+        img: "https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?q=80&w=1200&auto=format&fit=crop",
+        repo: "https://github.com/BhaviK06",
+        live: "#"
+      }
+    ];
+
+    const grid = document.getElementById('projectGrid');
+    const chip = t => `<span class="chip">${t}</span>`;
+    projects.forEach(p=>{
+      const el = document.createElement('article');
+      el.className = 'card';
+      el.innerHTML = `
+        <img class="thumb" src="${p.img}" alt="${p.title}"/>
+        <div class="body">
+          <h3>${p.title}</h3>
+          <p>${p.desc}</p>
+          <div class="tags">${p.tags.map(chip).join('')}</div>
+          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="${p.live}" target="_blank" rel="noopener">Live</a>
+            <a class="btn ghost" href="${p.repo}" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>`;
+      grid.appendChild(el);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const key = 'bhavi-theme';
+    const apply = t => (document.documentElement.setAttribute('data-theme', t), localStorage.setItem(key, t));
+    const saved = localStorage.getItem(key);
+    if(saved) apply(saved);
+    document.getElementById('themeBtn').addEventListener('click',()=>{
+      const cur = document.documentElement.getAttribute('data-theme');
+      apply(cur==='dark'?'light':'dark');
+    });
+    if(!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+      apply('dark');
+    }
+  </script>
 </body>
-
 </html>
