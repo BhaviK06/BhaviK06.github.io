@@ -28,7 +28,8 @@
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
-    a{color:inherit;text-decoration:none}
+    a{color:inherit;text-decoration:none;transition:color .2s ease, text-decoration .2s ease}
+    a:hover{color:#0073b1;text-decoration:underline} /* hover highlight for links */
     .container{max-width:1180px;margin:0 auto;padding:28px}
 
     /* NAV */
@@ -62,16 +63,20 @@
     .chip{font-size:12px;color:var(--muted);border:1px solid rgba(0,0,0,.12);padding:4px 8px;border-radius:999px}
 
     /* ABOUT */
-    .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px; align-items: start;}
+    .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
     .about-photo{position:relative;border-radius:var(--radius);overflow:hidden}
-    .about-photo img{width:100%;max-height:300%;object-fit:cover;display:block;filter:contrast(.95)}
-    .about-text{background:var(--panel);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow); max-height: 380px; overflow-y: auto;}
+    .about-photo img{width:100%;max-height:380px;object-fit:cover;display:block;filter:contrast(.95);border-radius:var(--radius)}
+    .about-text{background:var(--panel);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);max-height:380px;overflow-y:auto}
 
-    /* EXPERIENCE */
+    /* EXPERIENCE (certs list uses same styles) */
     .xp-list{display:grid;gap:18px;margin-top:22px}
     .xp-item{background:var(--panel);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.06)}
     .xp-item h3{margin:0 0 6px}
     .xp-item p{margin:0;color:var(--muted)}
+    .muted{color:var(--muted)}
+    .xp-item.lite{background:transparent;border:1px dashed rgba(0,0,0,.12)}
+    .xp-item.lite h3{font-weight:600;font-size:16px}
+    .xp-item.lite p{font-size:14px}
 
     /* CONTACT */
     .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -111,8 +116,7 @@
   <section id="home" class="hero container">
     <h1 class="display">Hello,<br/>World.</h1>
     <p class="sub">👋 My name is Bhavi, a Business Information Technology student majoring in software development.
-      It's lovely to meet you! Welcome to my corner of the internet.
-       </p>
+      It's lovely to meet you! Welcome to my corner of the internet.</p>
     <div class="scroll-down">↓</div>
   </section>
 
@@ -128,88 +132,96 @@
     <h2>This is Me!</h2>
     <div class="about-wrap">
       <div class="about-photo card">
-        <img src="profilepic.jpg" alt="Bhavi working on laptop" width="400" height="500"/>
+        <img src="profilepic.jpg" alt="Bhavi portrait" width="400" height="500"/>
       </div>
       <div class="about-text">
-        <p>
-         I’m a regular human who writes code, writes stories — and sometimes both crash halfway through (wiping the tears). 
-         Despite that, I still have a passion for tech, with interests in front-end development, mobile apps, 
-         cybersecurity, and my new love for gaming.
-        </p>
-        <p>
-          I believe that with the right ingredients, tech can feel like a little bit of fairytale magic. ✨ 
-          Hit me up to create that magic together.
-        </p>
-       
+        <p>I’m a regular human who writes code, writes stories — and sometimes both crash halfway through (wiping the tears). Despite that, I still have a passion for tech, with interests in front-end development, mobile apps, cybersecurity, and my new love for gaming.</p>
+        <p>I believe that with the right ingredients, tech can feel like a little bit of fairytale magic. ✨ Hit me up to create that magic together.</p>
       </div>
     </div>
   </section>
 
- <!-- CERTIFICATIONS & ACHIEVEMENTS -->
-<section id="experience" class="section container">
-  <h2>Certifications & Achievements</h2>
-  <div class="xp-list">
+  <!-- CERTIFICATIONS & ACHIEVEMENTS -->
+  <section id="experience" class="section container">
+    <h2>Certifications & Achievements</h2>
+    <div class="xp-list">
 
-    <div class="xp-item">
-      <h3>Cybersecurity — FITech Network University</h3>
-      <p>Issued Jun 2024 · Credential ID: 8ac35480ed4c4b717d8cea5915df587f1825388c</p>
-      <p class="muted">Skills: Cybersecurity Fundamentals · Network Security · Threat Analysis</p>
+      <div class="xp-item">
+        <h3>Cybersecurity — FITech Network University</h3>
+        <p>Issued Jun 2024 · Credential ID: 8ac35480ed4c4b717d8cea5915df587f1825388c ·
+          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
+        </p>
+        <p class="muted">Skills: Cybersecurity Fundamentals · Network Security · Threat Analysis</p>
+      </div>
+
+      <div class="xp-item">
+        <h3>Microsoft Practical AI Course</h3>
+        <p>Issued Apr 2024 · Microsoft ·
+          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
+        </p>
+        <p class="muted">Skills: Artificial Intelligence (AI) · Generative AI</p>
+      </div>
+
+      <div class="xp-item">
+        <h3>Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
+        <p>Issued Aug 2023 · Microsoft ·
+          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
+        </p>
+        <p class="muted">Skills: Generative AI · Computer Literacy · Computer Ethics · Artificial Intelligence (AI)</p>
+      </div>
+
+      <div class="xp-item">
+        <h3>Microsoft Learn AI Skills Challenge</h3>
+        <p>Issued Aug 2023 · Microsoft ·
+          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
+        </p>
+        <p class="muted">Skills: Computer Literacy</p>
+      </div>
+
+      <div class="xp-item">
+        <h3>Introduction to Computer Science and Programming Using Python — edX</h3>
+        <p>Issued Jul 2023 · Credential ID: 86fe38455a0f422eb775fae17ae58f0a ·
+          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
+        </p>
+        <p class="muted">Skills: Python · Problem Solving · Computational Thinking</p>
+      </div>
+
+      <div class="xp-item">
+        <h3>Elements of AI — University of Helsinki</h3>
+        <p>Issued 2023 ·
+          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
+        </p>
+        <p class="muted">Skills: Artificial Intelligence Basics · Ethical AI · Human-Centered Computing</p>
+      </div>
+
+      <div class="xp-item">
+        <h3>National Novel Writing Month Winner — Writer’s Digest</h3>
+        <p>Recognized for completing a 50,000-word novel in 30 days.</p>
+        <p class="muted">Skills: Fiction Writing · Creativity · Discipline</p>
+      </div>
+
     </div>
 
-    <div class="xp-item">
-      <h3>Microsoft Practical AI Course</h3>
-      <p>Issued Apr 2024 · Microsoft</p>
-      <p class="muted">Skills: Artificial Intelligence (AI) · Generative AI</p>
-    </div>
+    <!-- Resume link -->
+    <p class="lede" style="margin-top:20px">
+      <a class="btn ghost" href="./resume.pdf" target="_blank" rel="noopener">View Résumé →</a>
+    </p>
+  </section>
 
-    <div class="xp-item">
-      <h3>Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
-      <p>Issued Aug 2023 · Microsoft</p>
-      <p class="muted">Skills: Generative AI · Computer Literacy · Computer Ethics · Artificial Intelligence (AI)</p>
+  <!-- OTHER EXPERIENCE -->
+  <section id="other-experience" class="section container">
+    <h2>Other Experience</h2>
+    <div class="xp-list">
+      <div class="xp-item">
+        <h3>Nordic Business Forum — Volunteer (2024)</h3>
+        <p>Supported guest operations and logistics in a professional event environment.</p>
+      </div>
+      <div class="xp-item lite">
+        <h3>Lidl — Customer Service (Part-time)</h3>
+        <p class="muted">Customer support, POS operations, teamwork.</p>
+      </div>
     </div>
-
-    <div class="xp-item">
-      <h3>Microsoft Learn AI Skills Challenge</h3>
-      <p>Issued Aug 2023 · Microsoft</p>
-      <p class="muted">Skills: Computer Literacy</p>
-    </div>
-
-    <div class="xp-item">
-      <h3>Introduction to Computer Science and Programming Using Python — edX</h3>
-      <p>Issued Jul 2023 · Credential ID: 86fe38455a0f422eb775fae17ae58f0a</p>
-      <p class="muted">Skills: Python · Problem Solving · Computational Thinking</p>
-    </div>
-
-    <div class="xp-item">
-      <h3>Elements of AI — University of Helsinki</h3>
-      <p>Issued 2023</p>
-      <p class="muted">Skills: Artificial Intelligence Basics · Ethical AI · Human-Centered Computing</p>
-    </div>
-
-    <div class="xp-item">
-      <h3>National Novel Writing Month Winner — Writer’s Digest</h3>
-      <p>Creative writing challenge winner recognized for completing a 50,000-word novel in 30 days.</p>
-      <p class="muted">Skills: Fiction Writing · Creativity · Discipline</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- OTHER EXPERIENCE -->
-<section id="other-experience" class="section container">
-  <h2>Other Experience</h2>
-  <div class="xp-list">
-    <div class="xp-item">
-      <h3>Nordic Business Forum — Volunteer (2024)</h3>
-      <p>Supported guest operations and logistics in a professional event environment.</p>
-    </div>
-    <div class="xp-item lite">
-      <h3>Lidl — Customer Service (Part-time)</h3>
-      <p class="muted">Customer support, POS operations, teamwork.</p>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section container">
@@ -220,9 +232,9 @@
           <a href="mailto:bhavikataria.dev@gmail.com">bhavikataria.dev@gmail.com</a>
         </p>
         <p style="margin-top:8px"><b>Links</b><br>
-        <a href="https://github.com/BhaviK06" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" rel="noopener">LinkedIn</a>
-      </p>
+          <a href="https://github.com/BhaviK06" target="_blank" rel="noopener">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/bhavikataria" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
       </div>
       <div class="panel">
         <p>Open to internships and junior front-end roles. Can't wait to connect!</p>
@@ -236,15 +248,13 @@
   </footer>
 
   <script>
-    
     const projects = [
-      
       {
         title: "NexGen Robotics",
         desc: "A website designed for a robotics company.",
         tags: ["HTML","CSS"],
         img: "nexGenPic.png",
-        repo: "https://github.com/BhaviK06/BhaviK06.github.io/tree/main/nexGenRobotics",      
+        repo: "https://github.com/BhaviK06/BhaviK06.github.io/tree/main/nexGenRobotics",
         live: "https://bhavik06.github.io/nexGenRobotics/"
       },
       {
@@ -252,7 +262,7 @@
         desc: "A website that converts temperature from Celsius to Fahrenheit and vice versa.",
         tags: ["HTML","CSS","JavaScript"],
         img: "tempPic.png",
-        repo: "https://github.com/BhaviK06/temp-converter",     
+        repo: "https://github.com/BhaviK06/temp-converter",
         live: "https://bhavik06.github.io/temp-converter/"
       },
       {
@@ -263,14 +273,12 @@
         repo: "https://github.com/BhaviK06/snake",
         live: "https://bhavik06.github.io/snake/"
       },
-
-     
       {
         title: "Personal Trainer CRM",
         desc: "React app to manage customers & sessions. CRUD, CSV export, calendar, stats.",
         tags: ["React","TypeScript","REST API"],
         img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop",
-        repo: "https://github.com/BhaviK06",  
+        repo: "https://github.com/BhaviK06",
         live: "#"
       },
       {
@@ -286,7 +294,7 @@
         desc: "Console app for deposits, withdrawals, and interest — simple OOP exercise.",
         tags: ["Java","OOP"],
         img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
-        repo: "https://github.com/BhaviK06",  
+        repo: "https://github.com/BhaviK06",
         live: "#"
       },
       {
@@ -294,7 +302,7 @@
         desc: "Relational DB for books, members, and loans. ERD + CRUD queries.",
         tags: ["SQL","Database"],
         img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop",
-        repo: "https://github.com/BhaviK06",  
+        repo: "https://github.com/BhaviK06",
         live: "#"
       },
       {
@@ -302,7 +310,7 @@
         desc: "Expo app showing nearby places with geocoding and a clean UI.",
         tags: ["React Native","Expo","API"],
         img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
-        repo: "https://github.com/BhaviK06",  
+        repo: "https://github.com/BhaviK06",
         live: "#"
       }
     ];
