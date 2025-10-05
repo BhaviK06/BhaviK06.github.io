@@ -78,6 +78,25 @@
     .xp-item.lite h3{font-weight:600;font-size:16px}
     .xp-item.lite p{font-size:14px}
 
+    /* Accent color for credential buttons */
+:root { --brand:#2563eb; }            /* blue */
+[data-theme="dark"] { --brand:#60a5fa; }
+
+.btn.small { padding:8px 12px; font-size:14px; }
+.btn.cred {
+  background: transparent;
+  color: var(--brand);
+  border-color: color-mix(in oklab, var(--brand) 55%, transparent);
+}
+.btn.cred:hover {
+  background: var(--brand);
+  color:#fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px color-mix(in oklab, var(--brand) 25%, transparent);
+  text-decoration: none;
+}
+
+
     /* CONTACT */
     .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .contact .panel{background:var(--panel);padding:24px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.06)}
@@ -146,61 +165,79 @@
     <h2>Certifications & Achievements</h2>
     <div class="xp-list">
 
-      <div class="xp-item">
-        <h3>Cybersecurity — FITech Network University</h3>
-        <p>Issued Jun 2024 · Credential ID: 8ac35480ed4c4b717d8cea5915df587f1825388c ·
-          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
-        </p>
-        <p class="muted">Skills: Cybersecurity Fundamentals · Network Security · Threat Analysis</p>
-      </div>
+     <div class="xp-item">
+  <h3>Cybersecurity — FITech Network University</h3>
+  <p>
+    Issued Jun 2024 ·
+    <a class="btn cred small" href="https://openbadgefactory.com/v1/assertion/8ac35480ed4c4b717d8cea5915df587f1825388c.html" target="_blank" rel="noopener">Show credential ↗</a>
+  </p>
+  <p class="muted">Skills: Cybersecurity Fundamentals · Network Security · Threat Analysis</p>
+</div>
+
 
       <div class="xp-item">
-        <h3>Microsoft Practical AI Course</h3>
-        <p>Issued Apr 2024 · Microsoft ·
-          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
-        </p>
-        <p class="muted">Skills: Artificial Intelligence (AI) · Generative AI</p>
-      </div>
+  <h3>Microsoft Practical AI Course</h3>
+  <p>
+    Issued Apr 2024 · Microsoft ·
+    <a class="btn cred small" href="https://openbadgefactory.com/v1/assertion/31abb906d679e732daef07e6abfc3692c0d0289a" target="_blank" rel="noopener">Show credential ↗</a>
+  </p>
+  <p class="muted">Skills: Artificial Intelligence (AI) · Generative AI</p>
+</div>
+
 
       <div class="xp-item">
-        <h3>Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
-        <p>Issued Aug 2023 · Microsoft ·
-          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
-        </p>
-        <p class="muted">Skills: Generative AI · Computer Literacy · Computer Ethics · Artificial Intelligence (AI)</p>
-      </div>
+  <h3>Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
+  <p>
+    Issued Aug 2023 · Microsoft ·
+    <a class="btn cred small" href="https://www.linkedin.com/learning/certificates/e05c2e319dc71dac3549bfc9dedf0fea5effce1228b8a5a726ee1bd15200dbac" target="_blank" rel="noopener">Show credential ↗</a>
+  </p>
+  <p class="muted">Skills: Generative AI · Computer Literacy · Computer Ethics · Artificial Intelligence (AI)</p>
+</div>
 
       <div class="xp-item">
-        <h3>Microsoft Learn AI Skills Challenge</h3>
-        <p>Issued Aug 2023 · Microsoft ·
-          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
-        </p>
-        <p class="muted">Skills: Computer Literacy</p>
-      </div>
+  <h3>Microsoft Learn AI Skills Challenge</h3>
+  <p>
+    Issued Aug 2023 · Microsoft ·
+    
+  </p>
+  <p class="muted">Skills: Computer Literacy</p>
+</div>
+
 
       <div class="xp-item">
-        <h3>Introduction to Computer Science and Programming Using Python — edX</h3>
-        <p>Issued Jul 2023 · Credential ID: 86fe38455a0f422eb775fae17ae58f0a ·
-          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
-        </p>
-        <p class="muted">Skills: Python · Problem Solving · Computational Thinking</p>
-      </div>
+  <h3>Cybersecurity — FITech Network University</h3>
+  <p>
+    Issued Jun 2024 · Credential ID: 8ac35480ed4c4b717d8cea5915df587f1825388c ·
+    <a class="btn cred small" href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential ↗</a>
+  </p>
+  <p class="muted">Skills: Cybersecurity Fundamentals · Network Security · Threat Analysis</p>
+</div>
+
 
       <div class="xp-item">
-        <h3>Elements of AI — University of Helsinki</h3>
-        <p>Issued 2023 ·
-          <a href="ADD_LINK_HERE" target="_blank" rel="noopener">Show credential →</a>
-        </p>
-        <p class="muted">Skills: Artificial Intelligence Basics · Ethical AI · Human-Centered Computing</p>
-      </div>
+  <h3>Introduction to Computer Science and Programming Using Python — edX</h3>
+  <p>
+    Issued Jul 2023 · Massachusetts Institute of Technology (MIT) ·
+    <a class="btn cred small" href="https://courses.edx.org/certificates/86fe38455a0f422eb775fae17ae58f0a" target="_blank" rel="noopener">Show credential ↗</a>
+  </p>
+  <p class="muted">Skills: Python · Problem Solving · Computational Thinking</p>
+</div>
+
 
       <div class="xp-item">
+  <h3>Elements of AI </h3>
+  <p>
+    Issued 2023 · University of Helsinki ·
+   
+  </p>
+  <p class="muted">Skills: Artificial Intelligence Basics · Ethical AI · Human-Centered Computing</p>
+</div>
+
+<div class="xp-item">
         <h3>National Novel Writing Month Winner — Writer’s Digest</h3>
         <p>Recognized for completing a 50,000-word novel in 30 days.</p>
         <p class="muted">Skills: Fiction Writing · Creativity · Discipline</p>
       </div>
-
-    </div>
 
     <!-- Resume link -->
     <p class="lede" style="margin-top:20px">
@@ -216,7 +253,7 @@
         <h3>Nordic Business Forum — Volunteer (2024)</h3>
         <p>Supported guest operations and logistics in a professional event environment.</p>
       </div>
-      <div class="xp-item lite">
+      <div class="xp-item">
         <h3>Lidl — Customer Service (Part-time)</h3>
         <p class="muted">Customer support, POS operations, teamwork.</p>
       </div>
