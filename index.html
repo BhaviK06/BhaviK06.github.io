@@ -32,6 +32,19 @@
       --shadow: 0 10px 30px rgba(0, 0, 0, .4);
     }
 
+    /* Dark theme button overrides */
+    [data-theme="dark"] .btn {
+      background: var(--panel);
+      color: var(--text);
+      border-color: rgba(255, 255, 255, .1);
+    }
+
+    [data-theme="dark"] .btn.ghost {
+      background: transparent;
+      color: var(--text);
+      border-color: rgba(255, 255, 255, .1);
+    }
+
     * {
       box-sizing: border-box
     }
@@ -1078,12 +1091,13 @@
     });
   </script>
 
-  const grid = document.getElementById('projectGrid');
-  const chip = t => `<span class="chip">${t}</span>`;
-  projects.forEach(p => {
-  const el = document.createElement('article');
-  el.className = 'card';
-  el.innerHTML = `
+  <script>
+    grid = document.getElementById('projectGrid');
+    chip = t => `<span class="chip">${t}</span>`;
+    projects.forEach(p => {
+      const el = document.createElement('article');
+      el.className = 'card';
+      el.innerHTML = `
   <img class="thumb" src="${p.img}" alt="${p.title}" />
   <div class="body">
     <h3>${p.title}</h3>
@@ -1094,11 +1108,11 @@
       <a class="btn ghost" href="${p.repo}" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>`;
-  grid.appendChild(el);
-  });
+      grid.appendChild(el);
+    });
 
 
-  document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 
