@@ -142,6 +142,108 @@
       margin: 0
     }
 
+    /* ANIMATED HELLO */
+    .animated-hello {
+      margin-bottom: 18px;
+      position: relative
+    }
+
+    .line {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 800;
+      line-height: .9;
+      letter-spacing: -.02em;
+      font-size: clamp(60px, 14vw, 180px);
+      display: flex;
+      margin: 0.2em 0;
+      position: relative
+    }
+
+    .line span {
+      opacity: 0;
+      animation: typing 0.5s forwards
+    }
+
+    .hello span {
+      color: var(--text)
+    }
+
+    .world span {
+      color: var(--muted)
+    }
+
+    /* Typing animation delays */
+    .hello span:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .hello span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .hello span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .hello span:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    .hello span:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    .world span:nth-child(1) {
+      animation-delay: 0.6s;
+    }
+
+    .world span:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+
+    .world span:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+
+    .world span:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+
+    .world span:nth-child(5) {
+      animation-delay: 1s;
+    }
+
+    .world span:nth-child(6) {
+      animation-delay: 1.1s;
+    }
+
+    /* Blinking cursor after the last letter */
+    .world span:nth-child(6)::after {
+      content: '|';
+      animation: blink 1s infinite;
+      color: var(--text);
+      margin-left: 2px
+    }
+
+    @keyframes typing {
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes blink {
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      51%,
+      100% {
+        opacity: 0;
+      }
+    }
+
     .sub {
       max-width: 640px;
       margin-top: 18px;
@@ -219,13 +321,32 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
-      align-items: start
+      align-items: start;
+      animation: slideInLeft 0.8s ease-out both
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0)
+      }
     }
 
     .about-photo {
       position: relative;
       border-radius: var(--radius);
-      overflow: hidden
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer
+    }
+
+    .about-photo:hover {
+      transform: scale(1.02) rotate(1deg)
     }
 
     .about-photo img {
@@ -234,7 +355,12 @@
       object-fit: cover;
       display: block;
       filter: contrast(.95);
-      border-radius: var(--radius)
+      border-radius: var(--radius);
+      transition: filter 0.3s ease
+    }
+
+    .about-photo:hover img {
+      filter: contrast(1.1) brightness(1.05)
     }
 
     .about-text {
@@ -243,7 +369,30 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       max-height: 380px;
-      overflow-y: auto
+      overflow-y: auto;
+      animation: fadeInUp 0.8s ease-out 0.2s both
+    }
+
+    .about-text p {
+      margin: 0 0 16px 0;
+      animation: fadeInUp 0.8s ease-out 0.4s both
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+      animation-delay: 0.6s
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
     }
 
     /* EXPERIENCE */
@@ -401,6 +550,86 @@
         align-items: start
       }
     }
+
+    /* TECH STACK TERMINAL */
+    .terminal-wrap {
+      margin-top: 28px;
+    }
+
+    .terminal-card {
+      background: #000;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 0, 0, .08);
+    }
+
+    .terminal-topbar {
+      height: 52px;
+      background: #d8bcc7;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 18px;
+    }
+
+    .terminal-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+
+    .terminal-dot.red {
+      background: #ff5f57;
+    }
+
+    .terminal-dot.yellow {
+      background: #febc2e;
+    }
+
+    .terminal-dot.green {
+      background: #28c840;
+    }
+
+    .terminal-body {
+      background: #000;
+      color: #fff;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      padding: 22px;
+      height: 320px;
+      font-size: 14px;
+      line-height: 1.6;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .terminal-line {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .terminal-prompt {
+      color: #d946ef;
+      font-weight: 700;
+    }
+
+    .terminal-cursor {
+      display: inline-block;
+      opacity: 1;
+      transition: opacity .2s ease;
+    }
+
+    .terminal-cursor.hidden {
+      opacity: 0;
+    }
+
+    @media (max-width: 768px) {
+      .terminal-body {
+        height: 260px;
+        font-size: 12px;
+        padding: 18px;
+      }
+    }
   </style>
 </head>
 
@@ -425,10 +654,31 @@
 
   <!-- HERO -->
   <section id="home" class="hero container">
-    <h1 class="display">Hello,<br />World.</h1>
+    <div class="animated-hello">
+      <div class="line hello">
+        <span>H</span><span>e</span><span>l</span><span>l</span><span>o</span>
+      </div>
+      <div class="line world">
+        <span>W</span><span>o</span><span>r</span><span>l</span><span>d</span><span>!</span>
+      </div>
+    </div>
     <p class="sub">👋 My name is Bhavi, a Business Information Technology student majoring in software development.
       It's lovely to meet you! Welcome to my corner of the internet.</p>
-    <div class="scroll-down">↓</div>
+    
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="skills" class="section container">
+    <div class="terminal-wrap">
+      <div class="terminal-card">
+        <div class="terminal-topbar">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+        </div>
+        <div class="terminal-body" id="terminalOutput"></div>
+      </div>
+    </div>
   </section>
 
   <!-- PROJECTS -->
@@ -453,6 +703,8 @@
           create that magic together.</p>
       </div>
     </div>
+  </section>
+
   </section>
 
   <!-- CERTIFICATIONS-->
@@ -689,6 +941,117 @@
       grid.appendChild(el);
     });
 
+    /* ANIMATED TERMINAL */
+    const terminalOutput = document.getElementById('terminalOutput');
+
+    const terminalLines = [
+      { text: 'bhavi@portfolio ~ $ ', type: 'prompt', instant: true },
+      { text: 'cat skills.json', type: 'normal' },
+      { text: '', type: 'normal', instant: true },
+      { text: '🎯 Loading Bhavi\'s Tech Universe...', type: 'normal', instant: true },
+      { text: '', type: 'normal', instant: true },
+      { text: '{', type: 'normal' },
+      { text: '  "name": "Bhavi Kataria",', type: 'normal' },
+      { text: '  "title": "Software Developer",', type: 'normal' },
+      { text: '  "status": "Always Learning 🚀",', type: 'normal' },
+      { text: '  "coffee_level": "Infinite ☕",', type: 'normal' },
+      { text: '  "languages": ["TypeScript ⚡", "JavaScript 🔥", "Python 🐍", "SQL 💾"]', type: 'normal' },
+      { text: '  "frameworks": ["React ⚛️", "Node.js 🟢", "Docker 🐳"]', type: 'normal' },
+      { text: '  "tools": ["Git 📝", "GitHub 🐙", "VS Code 💻", "Figma 🎨"]', type: 'normal' },
+      { text: '  "motto": "Code is poetry written in logic 💭",', type: 'normal' },
+      { text: '  "available_for": "Internships & Junior Dev Roles 🎯"', type: 'normal' },
+      { text: '}', type: 'normal' },
+      { text: '', type: 'normal', instant: true },
+      { text: 'bhavi@portfolio ~ $ ', type: 'prompt', instant: true },
+      { text: 'echo "Let\'s create magic together! ✨"', type: 'normal' },
+      { text: '', type: 'normal', instant: true },
+      { text: 'Let\'s create magic together! ✨', type: 'normal', instant: true }
+    ];
+
+    let lineIndex = 0;
+    let charIndex = 0;
+    let displayedLines = [];
+    let cursorVisible = true;
+
+    function renderTerminal() {
+      if (!terminalOutput) return;
+
+      let html = '';
+
+      displayedLines.forEach(line => {
+        const className = line.type === 'prompt' ? 'terminal-line terminal-prompt' : 'terminal-line';
+        html += `<div class="${className}">${escapeHtml(line.text)}</div>`;
+      });
+
+      const currentLine = terminalLines[lineIndex];
+
+      if (currentLine && !currentLine.instant) {
+        const className = currentLine.type === 'prompt' ? 'terminal-line terminal-prompt' : 'terminal-line';
+        const partial = escapeHtml(currentLine.text.slice(0, charIndex));
+        html += `<div class="${className}">${partial}<span class="terminal-cursor ${cursorVisible ? '' : 'hidden'}">█</span></div>`;
+      } else if (!currentLine) {
+        html += `<div class="terminal-line"><span class="terminal-cursor ${cursorVisible ? '' : 'hidden'}">█</span></div>`;
+      }
+
+      terminalOutput.innerHTML = html;
+      terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    }
+
+    function escapeHtml(str) {
+      return str
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function typeTerminal() {
+      if (!terminalOutput) return;
+
+      if (lineIndex >= terminalLines.length) {
+        setTimeout(() => {
+          lineIndex = 0;
+          charIndex = 0;
+          displayedLines = [];
+          renderTerminal();
+          typeTerminal();
+        }, 2500);
+        return;
+      }
+
+      const currentLine = terminalLines[lineIndex];
+
+      if (currentLine.instant && charIndex === 0) {
+        displayedLines.push(currentLine);
+        lineIndex++;
+        renderTerminal();
+        setTimeout(typeTerminal, 120);
+        return;
+      }
+
+      const typingSpeed = lineIndex === 1 ? 65 : 28;
+
+      if (charIndex < currentLine.text.length) {
+        charIndex++;
+        renderTerminal();
+        setTimeout(typeTerminal, typingSpeed);
+      } else {
+        displayedLines.push(currentLine);
+        lineIndex++;
+        charIndex = 0;
+        renderTerminal();
+        setTimeout(typeTerminal, 140);
+      }
+    }
+
+    setInterval(() => {
+      cursorVisible = !cursorVisible;
+      renderTerminal();
+    }, 500);
+
+    renderTerminal();
+    typeTerminal();
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -714,6 +1077,52 @@
         document.querySelector('.menu').classList.remove('open');
       });
     });
+  </script>
+
+  const grid = document.getElementById('projectGrid');
+  const chip = t => `<span class="chip">${t}</span>`;
+  projects.forEach(p => {
+  const el = document.createElement('article');
+  el.className = 'card';
+  el.innerHTML = `
+  <img class="thumb" src="${p.img}" alt="${p.title}" />
+  <div class="body">
+    <h3>${p.title}</h3>
+    <p>${p.desc}</p>
+    <div class="tags">${p.tags.map(chip).join('')}</div>
+    <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn" href="${p.live}" target="_blank" rel="noopener">Live</a>
+      <a class="btn ghost" href="${p.repo}" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>`;
+  grid.appendChild(el);
+  });
+
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const key = 'bhavi-theme';
+  const apply = t => (document.documentElement.setAttribute('data-theme', t), localStorage.setItem(key, t));
+  const saved = localStorage.getItem(key);
+  if (saved) apply(saved);
+  document.getElementById('themeBtn').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  apply(cur === 'dark' ? 'light' : 'dark');
+  });
+  if (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  apply('dark');
+  }
+
+  // Menu toggle
+  document.getElementById('menuBtn').addEventListener('click', () => {
+  document.querySelector('.menu').classList.toggle('open');
+  });
+  // Close menu on link click
+  document.querySelectorAll('.menu a').forEach(a => {
+  a.addEventListener('click', () => {
+  document.querySelector('.menu').classList.remove('open');
+  });
+  });
   </script>
 </body>
 
