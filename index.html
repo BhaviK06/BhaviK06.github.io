@@ -465,6 +465,11 @@
       text-decoration: none;
     }
 
+    /* Hide theme toggle button - always dark theme */
+    #themeBtn {
+      display: none !important;
+    }
+
 
     /* CONTACT */
     .contact {
@@ -1058,15 +1063,8 @@
 
     const key = 'bhavi-theme';
     const apply = t => (document.documentElement.setAttribute('data-theme', t), localStorage.setItem(key, t));
-    const saved = localStorage.getItem(key);
-    if (saved) apply(saved);
-    document.getElementById('themeBtn').addEventListener('click', () => {
-      const cur = document.documentElement.getAttribute('data-theme');
-      apply(cur === 'dark' ? 'light' : 'dark');
-    });
-    if (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      apply('dark');
-    }
+    // Always apply dark theme
+    apply('dark');
 
     // Menu toggle
     document.getElementById('menuBtn').addEventListener('click', () => {
@@ -1101,18 +1099,6 @@
 
 
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  const key = 'bhavi-theme';
-  const apply = t => (document.documentElement.setAttribute('data-theme', t), localStorage.setItem(key, t));
-  const saved = localStorage.getItem(key);
-  if (saved) apply(saved);
-  document.getElementById('themeBtn').addEventListener('click', () => {
-  const cur = document.documentElement.getAttribute('data-theme');
-  apply(cur === 'dark' ? 'light' : 'dark');
-  });
-  if (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  apply('dark');
-  }
   </script>
 </body>
 
