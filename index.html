@@ -351,7 +351,8 @@
 
     .about-photo img {
       width: 100%;
-      max-height: 380px;
+      height: 100%;
+      max-height: 350px;
       object-fit: cover;
       display: block;
       filter: contrast(.95);
@@ -368,7 +369,7 @@
       padding: 20px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      max-height: 380px;
+      max-height: 350px;
       overflow-y: auto;
       animation: fadeInUp 0.8s ease-out 0.2s both
     }
@@ -640,7 +641,7 @@
         <div class="logo">bk</div>
         <div class="tagline">Bhavi Kataria</div>
       </div>
-      <button id="menuBtn" class="btn ghost" aria-label="Toggle menu" style="display:none">☰</button>
+      <button id="menuBtn" class="btn ghost" aria-label="Toggle menu">☰</button>
       <nav class="menu">
         <a class="active" href="#home">Home</a>
         <a href="#projects">Projects</a>
@@ -664,7 +665,7 @@
     </div>
     <p class="sub">👋 My name is Bhavi, a Business Information Technology student majoring in software development.
       It's lovely to meet you! Welcome to my corner of the internet.</p>
-    
+
   </section>
 
   <!-- TECH STACK -->
@@ -693,7 +694,7 @@
     <h2>This is Me!</h2>
     <div class="about-wrap">
       <div class="about-photo card">
-        <img src="profilepic.jpg" alt="Bhavi portrait" width="400" height="500" />
+        <img src="pp.jpeg" alt="Bhavi portrait" width="400" height="500" />
       </div>
       <div class="about-text">
         <p>I’m a regular human who writes code, writes stories — and sometimes both crash halfway through (wiping the
@@ -1112,17 +1113,6 @@
   if (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
   apply('dark');
   }
-
-  // Menu toggle
-  document.getElementById('menuBtn').addEventListener('click', () => {
-  document.querySelector('.menu').classList.toggle('open');
-  });
-  // Close menu on link click
-  document.querySelectorAll('.menu a').forEach(a => {
-  a.addEventListener('click', () => {
-  document.querySelector('.menu').classList.remove('open');
-  });
-  });
   </script>
 </body>
 
