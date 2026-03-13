@@ -1,117 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bhavi Kataria — Portfolio</title>
-  <meta name="description" content="Bhavi Kataria — BIT student at Haaga-Helia. Front-end projects in React, TypeScript, JavaScript, and Java." />
+  <meta name="description"
+    content="Bhavi Kataria — BIT student at Haaga-Helia. Front-end projects in React, TypeScript, JavaScript, and Java." />
   <meta name="theme-color" content="#eef0f3" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap"
+    rel="stylesheet">
   <style>
-    :root{
-      --bg:#eef0f3;
-      --panel:#ffffff;
-      --text:#111318;
-      --muted:#6b7280;
-      --accent:#111318;
-      --radius:18px;
-      --shadow:0 10px 30px rgba(0,0,0,.06);
+    :root {
+      --bg: #eef0f3;
+      --panel: #ffffff;
+      --text: #111318;
+      --muted: #6b7280;
+      --accent: #111318;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .06);
     }
-    [data-theme="dark"]{
-      --bg:#0b0c10;
-      --panel:#11131a;
-      --text:#e6e7eb;
-      --muted:#9aa0a6;
-      --accent:#e6e7eb;
-      --shadow:0 10px 30px rgba(0,0,0,.4);
+
+    [data-theme="dark"] {
+      --bg: #0b0c10;
+      --panel: #11131a;
+      --text: #e6e7eb;
+      --muted: #9aa0a6;
+      --accent: #e6e7eb;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .4);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
-    a{color:inherit;text-decoration:none;transition:color .2s ease, text-decoration .2s ease}
-    a:hover{color:#0073b1;text-decoration:underline} /* hover highlight for links */
-    .container{max-width:1180px;margin:0 auto;padding:28px}
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color .2s ease, text-decoration .2s ease
+    }
+
+    a:hover {
+      color: #0073b1;
+      text-decoration: underline
+    }
+
+    /* hover highlight for links */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px
+    }
 
     /* NAV */
-    header{position:sticky;top:0;z-index:20;backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid rgba(0,0,0,.05);background:color-mix(in oklab, var(--bg) 85%, transparent)}
-    .nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{font-weight:800;letter-spacing:.02em}
-    .menu{display:flex;gap:22px;align-items:center}
-    .menu a{color:var(--muted);font-weight:600}
-    .menu a.active{color:var(--text);border-bottom:3px solid var(--accent);padding-bottom:6px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid rgba(0,0,0,.1);background:var(--text);color:#fff;font-weight:700}
-    .btn.ghost{background:transparent;color:var(--text)}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, .05);
+      background: color-mix(in oklab, var(--bg) 85%, transparent)
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: .02em
+    }
+
+    .menu {
+      display: flex;
+      gap: 22px;
+      align-items: center
+    }
+
+    .menu a {
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .menu a.active {
+      color: var(--text);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 6px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, .1);
+      background: var(--text);
+      color: #fff;
+      font-weight: 700
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--text)
+    }
 
     /* HERO */
-    .hero{min-height:70vh;display:grid;align-items:end;padding:80px 0 40px}
-    .display{font-family:"Playfair Display",Georgia,serif;font-weight:800;line-height:.9;letter-spacing:-.02em;font-size:clamp(60px,14vw,180px);margin:0}
-    .sub{max-width:640px;margin-top:18px;color:var(--muted);font-size:20px}
-    .scroll-down{margin-top:32px;height:60px;display:flex;align-items:end;color:var(--muted)}
+    .hero {
+      min-height: 70vh;
+      display: grid;
+      align-items: end;
+      padding: 80px 0 40px
+    }
+
+    .display {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 800;
+      line-height: .9;
+      letter-spacing: -.02em;
+      font-size: clamp(60px, 14vw, 180px);
+      margin: 0
+    }
+
+    .sub {
+      max-width: 640px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 20px
+    }
+
+    .scroll-down {
+      margin-top: 32px;
+      height: 60px;
+      display: flex;
+      align-items: end;
+      color: var(--muted)
+    }
 
     /* SECTIONS */
-    .section{padding:60px 0}
-    .section h2{font-family:"Playfair Display",Georgia,serif;font-size:40px;margin:0 0 10px}
-    .lede{color:var(--muted);max-width:760px}
+    .section {
+      padding: 60px 0
+    }
+
+    .section h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 40px;
+      margin: 0 0 10px
+    }
+
+    .lede {
+      color: var(--muted);
+      max-width: 760px
+    }
 
     /* GRID */
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
-    .card{background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(0,0,0,.06)}
-    .thumb{aspect-ratio:16/10;object-fit:cover;width:100%}
-    .body{padding:16px}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-    .chip{font-size:12px;color:var(--muted);border:1px solid rgba(0,0,0,.12);padding:4px 8px;border-radius:999px}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px
+    }
+
+    .card {
+      background: var(--panel);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, .06)
+    }
+
+    .thumb {
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      width: 100%
+    }
+
+    .body {
+      padding: 16px
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px
+    }
+
+    .chip {
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid rgba(0, 0, 0, .12);
+      padding: 4px 8px;
+      border-radius: 999px
+    }
 
     /* ABOUT */
-    .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
-    .about-photo{position:relative;border-radius:var(--radius);overflow:hidden}
-    .about-photo img{width:100%;max-height:380px;object-fit:cover;display:block;filter:contrast(.95);border-radius:var(--radius)}
-    .about-text{background:var(--panel);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);max-height:380px;overflow-y:auto}
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start
+    }
+
+    .about-photo {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden
+    }
+
+    .about-photo img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      display: block;
+      filter: contrast(.95);
+      border-radius: var(--radius)
+    }
+
+    .about-text {
+      background: var(--panel);
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-height: 380px;
+      overflow-y: auto
+    }
 
     /* EXPERIENCE */
-    .xp-list{display:grid;gap:18px;margin-top:22px}
-    .xp-item{background:var(--panel);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.06)}
-    .xp-item h3{margin:0 0 6px}
-    .xp-item p{margin:0;color:var(--muted)}
-    .muted{color:var(--muted)}
-    .xp-item.lite{background:transparent;border:1px dashed rgba(0,0,0,.12)}
-    .xp-item.lite h3{font-weight:600;font-size:16px}
-    .xp-item.lite p{font-size:14px}
+    .xp-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 22px
+    }
 
-:root { --brand:#2563eb; }           
-[data-theme="dark"] { --brand:#60a5fa; }
+    .xp-item {
+      background: var(--panel);
+      padding: 18px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 0, 0, .06)
+    }
 
-.btn.small { padding:8px 12px; font-size:14px; }
-.btn.cred {
-  background: transparent;
-  color: var(--brand);
-  border-color: color-mix(in oklab, var(--brand) 55%, transparent);
-}
-.btn.cred:hover {
-  background: var(--brand);
-  color:#fff;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px color-mix(in oklab, var(--brand) 25%, transparent);
-  text-decoration: none;
-}
+    .xp-item h3 {
+      margin: 0 0 6px
+    }
+
+    .xp-item p {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .xp-item.lite {
+      background: transparent;
+      border: 1px dashed rgba(0, 0, 0, .12)
+    }
+
+    .xp-item.lite h3 {
+      font-weight: 600;
+      font-size: 16px
+    }
+
+    .xp-item.lite p {
+      font-size: 14px
+    }
+
+    :root {
+      --brand: #2563eb;
+    }
+
+    [data-theme="dark"] {
+      --brand: #60a5fa;
+    }
+
+    .btn.small {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+
+    .btn.cred {
+      background: transparent;
+      color: var(--brand);
+      border-color: color-mix(in oklab, var(--brand) 55%, transparent);
+    }
+
+    .btn.cred:hover {
+      background: var(--brand);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px color-mix(in oklab, var(--brand) 25%, transparent);
+      text-decoration: none;
+    }
 
 
     /* CONTACT */
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .contact .panel{background:var(--panel);padding:24px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.06)}
-
-    footer{padding:50px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-
-    @media (max-width: 980px){
-      .grid{grid-template-columns:1fr 1fr}
-      .about-wrap{grid-template-columns:1fr}
-      .contact{grid-template-columns:1fr}
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
     }
-    @media (max-width: 680px){
-      .grid{grid-template-columns:1fr}
+
+    .contact .panel {
+      background: var(--panel);
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 0, 0, .06)
+    }
+
+    footer {
+      padding: 50px 0;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    @media (max-width: 980px) {
+      .grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .about-wrap {
+        grid-template-columns: 1fr
+      }
+
+      .contact {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media (max-width: 680px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media (max-width: 768px) {
+      #menuBtn {
+        display: block
+      }
+
+      .menu {
+        display: none
+      }
+
+      .menu.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        padding: 16px;
+        box-shadow: var(--shadow);
+        gap: 16px;
+        border-radius: 0 0 var(--radius) var(--radius)
+      }
+
+      .hero {
+        padding: 40px 0 20px
+      }
+
+      .container {
+        padding: 14px
+      }
+
+      .section {
+        padding: 40px 0
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 16px;
+        align-items: start
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -119,6 +411,7 @@
         <div class="logo">bk</div>
         <div class="tagline">Bhavi Kataria</div>
       </div>
+      <button id="menuBtn" class="btn ghost" aria-label="Toggle menu" style="display:none">☰</button>
       <nav class="menu">
         <a class="active" href="#home">Home</a>
         <a href="#projects">Projects</a>
@@ -132,7 +425,7 @@
 
   <!-- HERO -->
   <section id="home" class="hero container">
-    <h1 class="display">Hello,<br/>World.</h1>
+    <h1 class="display">Hello,<br />World.</h1>
     <p class="sub">👋 My name is Bhavi, a Business Information Technology student majoring in software development.
       It's lovely to meet you! Welcome to my corner of the internet.</p>
     <div class="scroll-down">↓</div>
@@ -150,11 +443,14 @@
     <h2>This is Me!</h2>
     <div class="about-wrap">
       <div class="about-photo card">
-        <img src="profilepic.jpg" alt="Bhavi portrait" width="400" height="500"/>
+        <img src="profilepic.jpg" alt="Bhavi portrait" width="400" height="500" />
       </div>
       <div class="about-text">
-        <p>I’m a regular human who writes code, writes stories — and sometimes both crash halfway through (wiping the tears). Despite that, I still have a passion for tech, with interests in front-end development, mobile apps, cybersecurity, and my new love for gaming.</p>
-        <p>I believe that with the right ingredients, tech can feel like a little bit of fairytale magic. ✨ Hit me up to create that magic together.</p>
+        <p>I’m a regular human who writes code, writes stories — and sometimes both crash halfway through (wiping the
+          tears). Despite that, I still have a passion for tech, with interests in front-end development, mobile apps,
+          cybersecurity, and my new love for gaming.</p>
+        <p>I believe that with the right ingredients, tech can feel like a little bit of fairytale magic. ✨ Hit me up to
+          create that magic together.</p>
       </div>
     </div>
   </section>
@@ -165,92 +461,102 @@
     <div class="xp-list">
 
       <div class="xp-item">
-  <h3>Junction Hachathon</h3>
-  <p>
-    November 2025 ·
-    <a class="btn cred small" href="https://www.linkedin.com/feed/update/urn:li:activity:7396191332328722434/" target="_blank" rel="noopener">More ↗</a>
-  </p>
-  <p class="muted">Regis for Bank of Finland: an AI system that chunks regulations, classifies risks, finds overlaps and contradictions, and basically does the reading so humans don’t have to.
-</p>
-</div>
+        <h3>Junction Hachathon</h3>
+        <p>
+          November 2025 ·
+          <a class="btn cred small" href="https://www.linkedin.com/feed/update/urn:li:activity:7396191332328722434/"
+            target="_blank" rel="noopener">More ↗</a>
+        </p>
+        <p class="muted">Regis for Bank of Finland: an AI system that chunks regulations, classifies risks, finds
+          overlaps and contradictions, and basically does the reading so humans don’t have to.
+        </p>
+      </div>
 
-<div class="xp-item">
-  <h3>AI Solutions Day Winner</h3>
-  <p>
-    November 2025 ·
-    <a class="btn cred small" href="https://www.linkedin.com/feed/update/urn:li:activity:7395010756179591168/" target="_blank" rel="noopener">More ↗</a>
-  </p>
-  <p class="muted"> Designed an AI solution for a company called Mimiqit and emerged as a winner.
-</div>
+      <div class="xp-item">
+        <h3>AI Solutions Day Winner</h3>
+        <p>
+          November 2025 ·
+          <a class="btn cred small" href="https://www.linkedin.com/feed/update/urn:li:activity:7395010756179591168/"
+            target="_blank" rel="noopener">More ↗</a>
+        </p>
+        <p class="muted"> Designed an AI solution for a company called Mimiqit and emerged as a winner.
+      </div>
 
-     <div class="xp-item">
-  <h3>Cybersecurity — FITech Network University</h3>
-  <p>
-    Issued Jun 2024 ·
-    <a class="btn cred small" href="https://openbadgefactory.com/v1/assertion/8ac35480ed4c4b717d8cea5915df587f1825388c.html" target="_blank" rel="noopener">Show credential ↗</a>
-  </p>
-  <p class="muted">Skills: Cybersecurity Fundamentals · Network Security · Threat Analysis</p>
-</div>
+      <div class="xp-item">
+        <h3>Cybersecurity — FITech Network University</h3>
+        <p>
+          Issued Jun 2024 ·
+          <a class="btn cred small"
+            href="https://openbadgefactory.com/v1/assertion/8ac35480ed4c4b717d8cea5915df587f1825388c.html"
+            target="_blank" rel="noopener">Show credential ↗</a>
+        </p>
+        <p class="muted">Skills: Cybersecurity Fundamentals · Network Security · Threat Analysis</p>
+      </div>
 
 
       <div class="xp-item">
-  <h3>Microsoft Practical AI Course</h3>
-  <p>
-    Issued Apr 2024 · Microsoft ·
-    <a class="btn cred small" href="https://openbadgefactory.com/v1/assertion/31abb906d679e732daef07e6abfc3692c0d0289a" target="_blank" rel="noopener">Show credential ↗</a>
-  </p>
-  <p class="muted">Skills: Artificial Intelligence (AI) · Generative AI</p>
-</div>
+        <h3>Microsoft Practical AI Course</h3>
+        <p>
+          Issued Apr 2024 · Microsoft ·
+          <a class="btn cred small"
+            href="https://openbadgefactory.com/v1/assertion/31abb906d679e732daef07e6abfc3692c0d0289a" target="_blank"
+            rel="noopener">Show credential ↗</a>
+        </p>
+        <p class="muted">Skills: Artificial Intelligence (AI) · Generative AI</p>
+      </div>
 
 
       <div class="xp-item">
-  <h3>Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
-  <p>
-    Issued Aug 2023 · Microsoft ·
-    <a class="btn cred small" href="https://www.linkedin.com/learning/certificates/e05c2e319dc71dac3549bfc9dedf0fea5effce1228b8a5a726ee1bd15200dbac" target="_blank" rel="noopener">Show credential ↗</a>
-  </p>
-  <p class="muted">Skills: Generative AI · Computer Literacy · Computer Ethics · Artificial Intelligence (AI)</p>
-</div>
+        <h3>Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
+        <p>
+          Issued Aug 2023 · Microsoft ·
+          <a class="btn cred small"
+            href="https://www.linkedin.com/learning/certificates/e05c2e319dc71dac3549bfc9dedf0fea5effce1228b8a5a726ee1bd15200dbac"
+            target="_blank" rel="noopener">Show credential ↗</a>
+        </p>
+        <p class="muted">Skills: Generative AI · Computer Literacy · Computer Ethics · Artificial Intelligence (AI)</p>
+      </div>
 
       <div class="xp-item">
-  <h3>Microsoft Learn AI Skills Challenge</h3>
-  <p>
-    Issued Aug 2023 · Microsoft ·
-    
-  </p>
-  <p class="muted">Skills: Computer Literacy</p>
-</div>
+        <h3>Microsoft Learn AI Skills Challenge</h3>
+        <p>
+          Issued Aug 2023 · Microsoft ·
 
-
-      <div class="xp-item">
-  <h3>Introduction to Computer Science and Programming Using Python — edX</h3>
-  <p>
-    Issued Jul 2023 · Massachusetts Institute of Technology (MIT) ·
-    <a class="btn cred small" href="https://courses.edx.org/certificates/86fe38455a0f422eb775fae17ae58f0a" target="_blank" rel="noopener">Show credential ↗</a>
-  </p>
-  <p class="muted">Skills: Python · Problem Solving · Computational Thinking</p>
-</div>
+        </p>
+        <p class="muted">Skills: Computer Literacy</p>
+      </div>
 
 
       <div class="xp-item">
-  <h3>Elements of AI </h3>
-  <p>
-    Issued 2023 · University of Helsinki ·
-   
-  </p>
-  <p class="muted">Skills: Artificial Intelligence Basics · Ethical AI · Human-Centered Computing</p>
-</div>
+        <h3>Introduction to Computer Science and Programming Using Python — edX</h3>
+        <p>
+          Issued Jul 2023 · Massachusetts Institute of Technology (MIT) ·
+          <a class="btn cred small" href="https://courses.edx.org/certificates/86fe38455a0f422eb775fae17ae58f0a"
+            target="_blank" rel="noopener">Show credential ↗</a>
+        </p>
+        <p class="muted">Skills: Python · Problem Solving · Computational Thinking</p>
+      </div>
 
-<div class="xp-item">
+
+      <div class="xp-item">
+        <h3>Elements of AI </h3>
+        <p>
+          Issued 2023 · University of Helsinki ·
+
+        </p>
+        <p class="muted">Skills: Artificial Intelligence Basics · Ethical AI · Human-Centered Computing</p>
+      </div>
+
+      <div class="xp-item">
         <h3>National Novel Writing Month Winner — Writer’s Digest</h3>
         <p>Recognized for completing a 50,000-word novel in 30 days.</p>
         <p class="muted">Skills: Fiction Writing · Creativity · Discipline</p>
       </div>
 
-    <!-- Resume -->
-    <p class="lede" style="margin-top:20px">
-      <a class="btn ghost" href="./resume bhavi 2026.pdf" target="_blank" rel="noopener">View Résumé →</a>
-    </p>
+      <!-- Resume -->
+      <p class="lede" style="margin-top:20px">
+        <a class="btn ghost" href="./resume bhavi 2026.pdf" target="_blank" rel="noopener">View Résumé →</a>
+      </p>
   </section>
 
   <!-- OTHER EXPERIENCE -->
@@ -289,7 +595,7 @@
 
   <footer class="container">
     <small>© <span id="year"></span> Bhavi Kataria</small>
-    
+
   </footer>
 
   <script>
@@ -297,7 +603,7 @@
       {
         title: "NexGen Robotics",
         desc: "A website designed for a robotics company.",
-        tags: ["HTML","CSS"],
+        tags: ["HTML", "CSS"],
         img: "nexGenPic.png",
         repo: "https://github.com/BhaviK06/BhaviK06.github.io/tree/main/nexGenRobotics",
         live: "https://bhavik06.github.io/nexGenRobotics/"
@@ -305,7 +611,7 @@
       {
         title: "Loom Book Discovery App",
         desc: "A React Native mobile application for discovering, tracking, and managing your reading journey.",
-        tags: ["HTML","CSS","JavaScript", "Expo"],
+        tags: ["HTML", "CSS", "JavaScript", "Expo"],
         img: "loom.png.jpeg",
         repo: "https://github.com/BhaviK06/loom",
         live: "https://github.com/BhaviK06/loom"
@@ -314,7 +620,7 @@
       {
         title: "Temperature Converter",
         desc: "A website that converts temperature from Celsius to Fahrenheit and vice versa.",
-        tags: ["HTML","CSS","JavaScript"],
+        tags: ["HTML", "CSS", "JavaScript"],
         img: "tempPic.png",
         repo: "https://github.com/BhaviK06/temp-converter",
         live: "https://bhavik06.github.io/temp-converter/"
@@ -330,7 +636,7 @@
       {
         title: "Pomodoro App",
         desc: " A simple and effective time management tool using  HTML, CSS, and JavaScript",
-        tags: ["HTML","CSS","JavaScript"],
+        tags: ["HTML", "CSS", "JavaScript"],
         img: "pomodoro.png",
         repo: "https://github.com/BhaviK06/pomodoro-app",
         live: "https://bhavik06.github.io/pomodoro-app/"
@@ -338,35 +644,35 @@
       {
         title: "Avatar Generator",
         desc: "This minimalist site randomizes avatars or outfits",
-        tags: ["HTML","CSS","JavaScript"],
+        tags: ["HTML", "CSS", "JavaScript"],
         img: "avatar.png",
         repo: "https://github.com/BhaviK06/avatar-gen",
         live: "https://bhavik06.github.io/avatar-gen/"
       },
-        {
+      {
         title: "Quiz Masters Project",
         desc: "Quizzer is a web-based quiz application designed for teachers and students at Haaga-Helia.",
-        tags: ["Java","TypeScript"],
+        tags: ["Java", "TypeScript"],
         img: "quiz.jpeg",
         repo: "https://github.com/Project-Quiz-Masters/Quizzer",
         live: "https://github.com/Project-Quiz-Masters/Quizzer"
-    
+
       },
       {
         title: "REGIS- Junstion",
         desc: "Regis is an AI-powered regulatory intelligence system built for the Bank of Finland Challenge (Junction 2025).",
-        tags: ["JavaScript","Python", "CSS", "HTML", "Docker"],
+        tags: ["JavaScript", "Python", "CSS", "HTML", "Docker"],
         img: "regis.jpeg",
         repo: "https://github.com/mplanav/REGIS-JUNCTION2025",
         live: "https://github.com/mplanav/REGIS-JUNCTION2025"
-    
+
       },
     ];
 
-    
+
     const grid = document.getElementById('projectGrid');
     const chip = t => `<span class="chip">${t}</span>`;
-    projects.forEach(p=>{
+    projects.forEach(p => {
       const el = document.createElement('article');
       el.className = 'card';
       el.innerHTML = `
@@ -383,20 +689,32 @@
       grid.appendChild(el);
     });
 
-    
+
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const key = 'bhavi-theme';
     const apply = t => (document.documentElement.setAttribute('data-theme', t), localStorage.setItem(key, t));
     const saved = localStorage.getItem(key);
-    if(saved) apply(saved);
-    document.getElementById('themeBtn').addEventListener('click',()=>{
+    if (saved) apply(saved);
+    document.getElementById('themeBtn').addEventListener('click', () => {
       const cur = document.documentElement.getAttribute('data-theme');
-      apply(cur==='dark'?'light':'dark');
+      apply(cur === 'dark' ? 'light' : 'dark');
     });
-    if(!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+    if (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       apply('dark');
     }
+
+    // Menu toggle
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.querySelector('.menu').classList.toggle('open');
+    });
+    // Close menu on link click
+    document.querySelectorAll('.menu a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.querySelector('.menu').classList.remove('open');
+      });
+    });
   </script>
 </body>
+
 </html>
